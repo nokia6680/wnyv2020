@@ -52,27 +52,16 @@ svg,
 video,
 textarea { vertical-align: middle; }
 
-textarea { resize: none; }
+textarea {
+    resize: none;
+    cursor: text;
+}
 
 section { position: relative; }
 
 input,
 select,
 button { outline: none; }
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.content { flex: 1 0 auto; }
-
-.container {
-  margin: 0 auto;
-  max-width: $content;
-  width: 100%;
-}
 
 //Модули
 @import "modules/modules";

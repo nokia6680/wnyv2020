@@ -1,0 +1,25 @@
+section.main__player.player
+    .player__wrapper
+        .player__video
+            .player__frame
+                iframe(src="").player__content
+            .player__controls.controls
+                // Кнопки первой части
+                ul.controls__list.step-1
+                    li.controls__item
+                        button(type="button").controls__btn.play Плэй
+                    li.controls__item
+                        button(type="button").controls__btn.pause Пауза
+                    li.controls__item
+                        button(type="button").controls__btn.stop Стоп
+                    li.controls__item
+                        button(type="button").controls__btn.rec Запись
+                // Кнопки второй части
+                ul.controls__list.step-2
+                    li.controls__item
+                        button(type="button").controls__btn.listen Прослушать
+                    li.controls__item
+                        button(type="button").controls__btn.repeat Перезаписать
+                    li.controls__item
+                        button(type="submit").controls__btn.send Отправить
+        a(href="#" target="_self").player__return Выбрать другое шоу

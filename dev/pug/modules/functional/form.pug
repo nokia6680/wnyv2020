@@ -1,0 +1,19 @@
+form(action="#" method="get").form
+    ul.form__list
+        li.form__item.name
+            label(for="name").form__label Имя:
+            input(type="text" name="name" id="name").form__input
+            span.form__sign.error
+        li.form__item.tel
+            label(for="tel").form__label Номер телефона:
+            input(type="tel" name="tel" id="tel").form__input
+            span.form__sign.correct
+        li.form__item.checkbox
+            input(type="checkbox" name="rules" id="rules").form__checkbox
+            label(for="rules").form__sublabel Я согласен с правилами проведения конкурса
+            span.form__sign.error
+        li.form__item.checkbox
+            input(type="checkbox" name="policy" id="policy").form__checkbox
+            label(for="policy").form__sublabel Я согласен с обработкой персональных данных
+            span.form__sign.error
+    button(type="submit").form__submit Отправить
