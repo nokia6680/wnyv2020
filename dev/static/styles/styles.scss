@@ -1,5 +1,6 @@
 @import "utils/libs";
 @import "utils/vars";
+@import "utils/fonts";
 @import "utils/mixins";
 //@include sprites($spritesheet-sprites);
 
@@ -7,6 +8,7 @@ html {
   font-family: $primary-font, Arial, serif;
   font-size: 16px;
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
 }
@@ -28,6 +30,17 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    @include flex-setting(column, flex-start, center);
+
+    padding: 1.25rem 1rem;
 }
 
 ol, ul {
