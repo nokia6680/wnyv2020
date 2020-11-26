@@ -94,3 +94,9 @@
     left: 1px;
   }
 }
+
+@mixin height($height, $width, $index, $height-with-units) {
+    $index: calc($height / $width);
+    $height-with-units: calc($height * 1px);
+    height: Min(calc(100vw * $index), var($height-with-units));
+}

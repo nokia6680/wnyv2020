@@ -2,7 +2,10 @@ section.main__player.player
     .player__wrapper
         .player__video
             .player__frame
-                iframe(src="").player__content
+                video(src="static/video/video-1.mp4" type="video/mp4" style="--width: 712; --height: 500;" autoplay="none").player__content
+                .player__details
+                    img(src="static/images/content/hero-1.png" alt="").player__details-image
+                    b.player__details-title Губка&nbsp;Боб Квадратные&nbsp;Штаны
             .player__controls.controls
                 // Кнопки первой части
                 ul.controls__list.step-1
@@ -12,7 +15,7 @@ section.main__player.player
                         button(type="button").controls__btn.pause Пауза
                     li.controls__item
                         button(type="button").controls__btn.stop Стоп
-                    li.controls__item
+                    li.controls__item.rec
                         button(type="button").controls__btn.rec Запись
                 // Кнопки второй части
                 ul.controls__list.step-2
@@ -20,6 +23,59 @@ section.main__player.player
                         button(type="button").controls__btn.listen Прослушать
                     li.controls__item
                         button(type="button").controls__btn.repeat Перезаписать
-                    li.controls__item
+                    li.controls__item.send
                         button(type="submit").controls__btn.send Отправить
         a(href="#" target="_self").player__return Выбрать другое шоу
+    .player__elements
+
+        .player__elements-block.el-left
+            .player__elements-frame.el-disk
+                img(src="static/images/common/4-disc.svg" alt="").player__elements-image
+            .player__elements-frame.el-star
+                img(src="static/images/common/4-star.svg" alt="").player__elements-image
+            .player__elements-frame.el-tree
+                img(src="static/images/common/4-tree.svg" alt="").player__elements-image
+            .player__elements-frame.el-cone
+                img(src="static/images/common/4-cone.svg" alt="").player__elements-image
+
+        .player__elements-block.el-right
+            .player__elements-frame.el-disk
+                img(src="static/images/common/4-disc.svg" alt="").player__elements-image
+            .player__elements-frame.el-star
+                img(src="static/images/common/4-star.svg" alt="").player__elements-image
+            .player__elements-frame.el-tree
+                img(src="static/images/common/4-tree.svg" alt="").player__elements-image
+            .player__elements-frame.el-cone
+                img(src="static/images/common/4-cone.svg" alt="").player__elements-image
+        
+        .player__stars
+            svg.player__stars-ball.b1
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b2
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b3
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b4
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b5
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b6
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b7
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b8
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b9
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b10
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b11
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b12
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b13
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b14
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
+            svg.player__stars-ball.b15
+                circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")

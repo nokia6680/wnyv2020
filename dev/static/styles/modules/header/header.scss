@@ -34,6 +34,18 @@
         }
     }
 
+    &.step-3 {
+        .header__info-description {
+            display: none;
+
+            &.step-3 {
+                max-width: 288px;
+                display: inline-flex;
+                margin-bottom: 0.875rem;
+            }
+        }
+    }
+
     &__logo {
         width: 100%;
         @include flex-setting(column, flex-start, center);
@@ -86,6 +98,8 @@
         width: 100%;
 
         @include flex-setting(row, space-between, center);
+
+        margin-bottom: 1rem;
     }
 
     &__progress {
@@ -135,6 +149,7 @@
     }
 
     &__info {
+        @include flex-setting(column, flex-start, center);
         order: 3;
 
         &-description {

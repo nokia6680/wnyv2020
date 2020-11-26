@@ -1,3 +1,117 @@
 .footer {
-    display: none;
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+
+    margin-top: auto;
+    margin-bottom: 0;
+
+    &__nav {
+        width: 100%;
+        @include flex-setting(row, space-between, center);
+    }
+
+    &__list {
+        width: auto;
+        @include flex-setting(row, flex-start, center);
+
+        &-item {
+            width: auto;
+            margin-right: 0.625rem;
+
+            &:first-of-type {
+                display: none;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        &-link {
+            @include flex-setting(column, center, center);
+            @include font-setting($primary-font, 0.75rem, 1, 500, rgba(255, 255, 255, 0.4));
+
+            text-transform: uppercase;
+            text-decoration: none;
+
+            padding: 0.625rem 1.25rem;
+
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 25px;
+            transition: 0.2s linear;
+
+            &:hover,
+            &:active,
+            &:focus {
+                border-color: rgba(255, 255, 255, 1);
+                color: rgba(255, 255, 255, 1);
+                transition: 0.2s linear;
+            }
+        }
+    }
+
+    &__social {
+        width: auto;
+        @include flex-setting(row, flex-start, center);
+
+        &-item {
+            width: auto;
+            margin-left: 0.625rem;
+        }
+
+        &-link {
+            position: relative;
+            @include flex-setting(column, center, center);
+
+            text-decoration: none;
+
+            width: 28px;
+            height: 28px;
+
+            border-radius: 14px;
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: 0.2s linear;
+
+            cursor: pointer;
+            outline: none;
+
+            .fa-vk::before {
+              position: absolute;
+              content: '\f189';
+              font-size: 1em;
+              color: #2d0304;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            .fa-instagram::before {
+              position: absolute;
+              content: '\f16d';
+              font-size: 1em;
+              color: #2d0304;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            .fa-youtube::before {
+              position: absolute;
+              content: '\f167';
+              font-size: 1em;
+              color: #2d0304;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: rgba(255, 255, 255, 1);
+                transition: 0.2s linear;
+            }
+        }
+    }
 }
