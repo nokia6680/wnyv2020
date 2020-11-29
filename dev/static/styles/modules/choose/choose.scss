@@ -70,7 +70,7 @@
         max-width: 248px;
         max-height: 248px;
 
-        border: 4px solid #fefefe;
+        border: 2px solid #fefefe;
         box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.2), 0 0 10px 3px rgba(255, 255, 255, 0.2) inset;
         border-radius: 124px;
 
@@ -133,14 +133,13 @@
     }
 
     &__item {
-        width: 208px;
-        height: 208px;
+        width: 212px;
+        height: 212px;
 
-        max-width: 208px;
-        max-height: 208px;
+        max-width: 212px;
+        max-height: 212px;
 
-        border-radius: 104px;
-        border: 1px solid white;
+        border-radius: 106px;
 
         overflow: hidden;
 
@@ -238,6 +237,90 @@
             border-radius: 26px;
 
             box-shadow: 0 0 5px 0px rgba(153, 228, 35, 0.57), 0 0 5px 0px rgba(153, 228, 35, 0.57) inset;
+        }
+    }
+
+    &__elements {
+        padding: 10rem 1.5rem 12rem 1.5rem;
+
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        &-block.el-right {
+            display: none;
+        }
+
+        &-block.el-left {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-frame {
+            position: absolute;
+
+            &.el-ball {
+                width: 35px;
+                height: 42px;
+
+                top: 0.625rem;
+                left: 0.625rem;
+                transform: rotate(-44deg);
+
+                .choose__elements-image {
+                    @include glowBox(glow-red, 219, 30, 71, 0.8, 3s, 0s);
+                }
+            }
+
+            &.el-ball-2 {
+                width: 34px;
+                height: 37px;
+
+                top: 14.75rem;
+                right: 0.625rem;
+
+                .choose__elements-image {
+                    @include glowBox(glow-y, 231, 201, 1, 0.8, 2.5s, 0.5s);
+                }
+            }
+
+            &.el-figure {
+                width: 34px;
+                height: 43px;
+
+                top: 14.875rem;
+                left: 0.75rem;
+
+                transform: rotate(-22deg);
+
+                .choose__elements-image {
+                    @include glowBox(glow-w, 255, 255, 255, 0.7, 2.8s, 1s);
+                }
+            }
+
+            &.el-tube {
+                width: 30px;
+                height: 40px;
+
+                top: 0.875rem;
+                right: 0.625rem;
+
+                .choose__elements-image {
+                    @include glowBox(glow-o, 224, 84, 2, 0.7, 2s, 1s);
+                }
+            }
+        }
+
+        .choose__elements-image {
+            width: inherit;
+            height: inherit;
+
+            object-fit: contain;
         }
     }
 }

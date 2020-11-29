@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.18 221.82">
-    <defs>
-        <style>.cls-1,.cls-3{fill:#fff;}.cls-2{fill:#231f20;}.cls-3{opacity:0.24;}.cls-4{fill:#00aeef;opacity:0.16;}.cls-6{fill:#d22a57;}</style>
-    </defs>
-    <g id="Слой_2" data-name="Слой 2">
-        <g id="Layer_1" data-name="Layer 1">
-            <circle class="cls-1" cx="47.22" cy="47.22" r="47.22"/>
-            <ellipse class="cls-2" cx="23.2" cy="41.79" rx="23.38" ry="14.25" transform="translate(-21.11 59.71) rotate(-82.98)"/>
-            <ellipse class="cls-3" cx="19.41" cy="34.42" rx="8.47" ry="5.16" transform="translate(-18.72 44.8) rotate(-75.81)"/>
-            <ellipse class="cls-3" cx="13.57" cy="45.99" rx="1.76" ry="2.88"/>
-            <path class="cls-4" d="M91.62,30.82A47.22,47.22,0,1,1,2.88,63.15s16.74,24.42,47,14.47S91.62,30.82,91.62,30.82Z"/>
-            <ellipse class="cls-6" cx="48.68" cy="198.07" rx="47.5" ry="23.75"/>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 165.6"><defs><style>.cls-1,.cls-3{fill:#fff;}.cls-2{fill:#231f20;}.cls-3{opacity:0.24;}.cls-3,.cls-4{isolation:isolate;}.cls-4{fill:#00aeef;opacity:0.16;}.cls-5{fill:#ff5384;}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><g id="Слой_2-2" data-name="Слой 2"><g id="Layer_1" data-name="Layer 1"><circle class="cls-1" cx="47.78" cy="47.22" r="47.22"/><ellipse class="cls-2" cx="22.02" cy="41.79" rx="23.38" ry="14.25" transform="translate(-22.15 58.54) rotate(-82.98)"/><ellipse class="cls-3" cx="18.23" cy="34.42" rx="8.47" ry="5.16" transform="translate(-19.61 43.65) rotate(-75.81)"/><ellipse class="cls-3" cx="12.39" cy="45.99" rx="1.76" ry="2.88"/><path class="cls-4" d="M90.44,30.82A47.22,47.22,0,1,1,1.7,63.15s16.74,24.42,47,14.47S90.44,30.82,90.44,30.82Z"/><ellipse class="cls-5" cx="47.5" cy="141.85" rx="47.5" ry="23.75"/></g></g></g></g></svg>

@@ -1,6 +1,8 @@
-- var images = [{name: '1', source: 'intro-ball-orange.svg'}, {name: '2', source: 'intro-cube.svg'}, {name: '3', source: 'intro-cube.svg'}, {name: '4', source: 'intro-eye.svg'}, {name: '5', source: 'intro-eye-shadow.svg'}, {name: '7', source: 'intro-smile-1.svg'}, {name: '8', source: 'intro-smile-2.svg'}, {name: '9', source: 'meduza.svg'}, {name: '10', source: 'intro-cloud-1.svg'}, {name: '11', source: 'intro-cloud-2.svg'}, {name: '12', source: 'intro-cloud-3.svg'}, {name: '13', source: 'gift.svg'}, {name: '14', source: 'intro-ball-2.svg'}, {name: '15', source: 'intro-eye.svg'}, {name: '16', source: 'intro-eye.svg'}, {name: '17', source: 'meduza.svg'}]
+- var images = [{name: '1', source: 'intro-ball-orange.svg'}, {name: '2', source: 'intro-cube.svg'}, {name: '3', source: 'intro-cube.svg'}, {name: '4', source: 'intro-eye.svg'}, {name: '5', source: 'intro-eye.svg'}, {name: '7', source: 'intro-smile-1.svg'}, {name: '8', source: 'intro-smile-2.svg'}, {name: '9', source: 'meduza.svg'}, {name: '10', source: 'intro-cloud-1.svg'}, {name: '11', source: 'intro-cloud-2.svg'}, {name: '13', source: 'gift.svg'}, {name: '14', source: 'intro-ball-2.svg'}, {name: '15', source: 'intro-eye.svg'}, {name: '16', source: 'intro-eye.svg'}, {name: '17', source: 'meduza.svg'}]
 
 section.intro
+    include ../functional/stars
+    
     .intro__wrapper
         .intro__logo
             a(href="#" target="_blank").intro__link.nickelodeon
@@ -8,8 +10,8 @@ section.intro
             h1.intro__title
                 img(src="static/images/common/logo-intro.svg" alt="Нам нужен твой голос").intro__title-image
         .intro__info
-            p.intro__info-description Всегда мечтал попробовать себя в озвучке? Участвуй в конкурсе и выигрывай призы от Nickelodeon!
-            p.intro__info-description Выбери шоу, которое хочешь озвучить, запиши свою версию озвучки и отправь нам. Автор лучшей работы отправится на настоящую студию звукозаписи в  Москве!
+            p.intro__info-description Всегда мечтал попробовать себя в озвучке? Участвуй&nbsp;в&nbsp;конкурсе и выигрывай призы от Nickelodeon!
+            p.intro__info-description Выбери шоу, которое хочешь озвучить, запиши свою версию озвучки и отправь нам. Автор лучшей работы отправится на&nbsp;настоящую студию звукозаписи в  Москве!
             
             a(href="#" target="_self").intro__info-link Участвовать
         .intro__support
@@ -18,8 +20,7 @@ section.intro
                 img(src="static/images/common/tri-logo.svg" alt="tricolor-tv").intro__support-logo
     .intro__images.i-images
         for i in images
-            span(class="i-images__frame i-" +i.name)
-                img(src="static/images/common/" +i.source).i-images__item
+            img(src="static/images/common/" +i.source class="i-images__item i-" +i.name)
         // Микрофон
         .i-images__mic
             .i-images__mic-top

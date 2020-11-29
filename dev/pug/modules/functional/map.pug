@@ -1,79 +1,74 @@
 section.map
-    .map__wrapper
-        ul.map__list.m-list
-            // Выбери шоу - пирамида
-            li.m-list__item.stage-1
-                a(href="choose.html" target="_self").m-list__link
-                    .m-list__frame.frame-pyramid
-                        .frame-pyramid__top
-                            img(src="static/images/common/piramide-top.svg" alt="piramide-top").frame-pyramid__top-image
-                            img(src="static/images/common/intro-eye.svg").frame-pyramid__top-eye
-                            img(src="static/images/common/piramide-top-glow.svg" alt="piramide-top-glow").frame-pyramid__top-glow
-                        .frame-pyramid__middle
-                            img(src="static/images/common/piramide-bottom.svg" alt="piramide-middle").frame-pyramid__middle-image
-                            img(src="static/images/common/intro-eye.svg").frame-pyramid__middle-eye
-                            img(src="static/images/common/piramide-bottom-glow.svg" alt="piramide-middle-glow").frame-pyramid__middle-glow
-                        .frame-pyramid__bottom
-                            img(src="static/images/common/piramide-bottom.svg" alt="piramide-bottom").frame-pyramid__bottom-image
-                            img(src="static/images/common/intro-eye.svg").frame-pyramid__top-eye
-                            img(src="static/images/common/piramide-bottom-glow.svg" alt="piramide-bottom-glow").frame-pyramid__bottom-glow
-                    span.m-list__text Выбери шоу
+    ul.map__list
+        // Выбери шоу - пирамида
+        li.map__item.stage-1
+            a(href="#" target="_self").map__link
+                .map__frame.frame-pyramid
+                    .frame-pyramid__top
+                        img(src="static/images/common/piramide-top.svg" alt="piramide-top").frame-pyramid__top-image
+                        img(src="static/images/common/intro-eye.svg").frame-pyramid__top-eye
+                        img(src="static/images/common/piramide-top-glow.svg" alt="piramide-top-glow").frame-pyramid__top-glow
+                    .frame-pyramid__middle
+                        img(src="static/images/common/piramide-bottom.svg" alt="piramide-middle").frame-pyramid__middle-image
+                        img(src="static/images/common/intro-eye.svg").frame-pyramid__middle-eye
+                        img(src="static/images/common/piramide-bottom-glow.svg" alt="piramide-middle-glow").frame-pyramid__middle-glow
+                    .frame-pyramid__bottom
+                        img(src="static/images/common/piramide-bottom.svg" alt="piramide-bottom").frame-pyramid__bottom-image
+                        img(src="static/images/common/intro-eye.svg").frame-pyramid__bottom-eye
+                        img(src="static/images/common/piramide-bottom-glow.svg" alt="piramide-bottom-glow").frame-pyramid__bottom-glow
+                span.map__text Выбери шоу
                     
-            // Триколор
-            li.m-list__item.link-1
-                a(href="tricolor.html" target="_self").m-list__link
-                    .m-list__frame.frame-tv
-                        img(src="static/images/common/tv-body.svg" alt="").frame-tv__body
-                        img(src="static/images/common/tv-screen.svg" alt="").frame-tv__screen
-                        img(src="static/images/common/tv-holder.svg" alt="").frame-tv__holder
-                    span.m-list__text.small Триколор
+        // Триколор
+        li.map__item.link-1
+            a(href="#" target="_self").map__link
+                .map__frame.frame-tv
+                    img(src="static/images/common/tv-body.svg" alt="").frame-tv__body
+                    img(src="static/images/common/tv-screen.svg" alt="").frame-tv__screen
+                    img(src="static/images/common/tv-holder.svg" alt="").frame-tv__holder
+                span.map__text.small Триколор
                     
-            // Призы
-            li.m-list__item.link-2
-                a(href="prizes.html" target="_self").m-list__link
-                    .m-list__frame.frame-gift
-                        img(src="static/images/common/gift-2.svg" alt="Prize").frame-gift__image
-                        img(src="static/images/common/gift-2-bottom.svg" alt="Prize bottom").frame-gift__bottom
-                    span.m-list__text.small Призы
+        // Призы
+        li.map__item.link-2
+            a(href="#" target="_self").map__link
+                .map__frame.frame-gift
+                    img(src="static/images/common/gift-2.svg" alt="Prize").frame-gift__image
+                    img(src="static/images/common/gift-2-bottom.svg" alt="Prize bottom").frame-gift__bottom
+                span.map__text.small Призы
                     
-            // Озвучь его - микрофон
-            li.m-list__item.stage-2
-                a(href="player.html" target="_self").m-list__link
-                    .m-list__frame.frame-mic
-                        .frame-mic__top
-                            img(src="static/images/common/mic-top.svg").frame-mic__top-image
-                            img(src="static/images/common/mic-top-shape.svg").frame-mic__top-shape
-                        .frame-mic__bottom
-                            img(src="static/images/common/mic-bottom.svg").frame-mic__bottom-image
-                            img(src="static/images/common/mic-bottom-shape.svg").frame-mic__bottom-shape
-                        .frame-mic__cube.cube-1
-                            img(src="static/images/common/cube-1.svg").frame-mic__cube-image
-                            img(src="static/images/common/cube-1-shape.svg").frame-mic__cube-shape
-                        .frame-mic__cube.cube-2
-                            img(src="static/images/common/cube-2.svg").frame-mic__cube-image
-                            img(src="static/images/common/cube-2-shape.svg").frame-mic__cube-shape
-                    span.m-list__text Озвучь его
+        // Озвучь его - микрофон
+        li.map__item.stage-2
+            a(href="#" target="_self").map__link
+                .map__frame.frame-mic
+                    .frame-mic__top
+                        img(src="static/images/common/mic-2-up.svg").frame-mic__top-image
+                        img(src="static/images/common/mic-2-up-glow.svg").frame-mic__top-shape
+                    .frame-mic__bottom
+                        img(src="static/images/common/mic-2-bottom.svg").frame-mic__bottom-image
+                        img(src="static/images/common/mic-2-low-glow.svg").frame-mic__bottom-shape
+                span.map__text Озвучь его
                     
-            // Отправь нам - ракета
-            li.m-list__item.stage-3
-                a(href="#" target="_self").m-list__link
-                    .m-list__frame.frame-rocket
-                        .frame-rocket__top
-                            img(src="static/images/common/rocket-small-top.svg" alt="").frame-rocket__top-image
-                            img(src="static/images/common/rocket-small-top-glow.svg" alt="").frame-rocket__top-shape
-                            img(src="static/images/common/intro-cloud-2.svg").frame-rocket__top-cloud
-                        .frame-rocket__bottom
-                            img(src="static/images/common/rocket-small-bottom.svg" alt="").frame-rocket__bottom-image
-                            img(src="static/images/common/rocket-small-bottom-glow.svg" alt="").frame-rocket__bottom-shape
-                            img(src="static/images/common/intro-cloud-1.svg").frame-rocket__bottom-cloud
-                    span.m-list__text Отправь нам
-            
-            // Победители - кубок
-            li.m-list__item.link-3
-                a(href="#" target="_self").m-list__link
-                    .m-list__frame.frame-cup
-                        img(src="static/images/common/cup.svg" alt="winners").frame-cup__image
-                        img(src="static/images/common/cup-bottom.svg" alt="winners bottom").frame-cup__bottom
-                        img(src="static/images/common/meduza.svg" alt="").frame-cup__jelly.c-jelly-1
-                        img(src="static/images/common/meduza.svg" alt="").frame-cup__jelly.c-jelly-2
-                        img(src="static/images/common/meduza.svg" alt="").frame-cup__jelly.c-jelly-3
+        // Отправь нам - ракета
+        li.map__item.stage-3
+            a(href="#" target="_self").map__link
+                .map__frame.frame-rocket
+                    .frame-rocket__top
+                        img(src="static/images/common/rocket-small-top.svg" alt="").frame-rocket__top-image
+                        img(src="static/images/common/rocket-small-top-glow.svg" alt="").frame-rocket__top-shape
+                        img(src="static/images/common/intro-cloud-2.svg").frame-rocket__top-cloud
+                    .frame-rocket__bottom
+                        img(src="static/images/common/rocket-small-bottom.svg" alt="").frame-rocket__bottom-image
+                        img(src="static/images/common/rocket-small-bottom-glow.svg" alt="").frame-rocket__bottom-shape
+                        img(src="static/images/common/intro-cloud-1.svg").frame-rocket__bottom-cloud
+                span.map__text Отправь нам
+        
+        // Победители - кубок
+        li.map__item.link-3
+            a(href="#" target="_self").map__link
+                .map__frame.frame-cup
+                    img(src="static/images/common/cup.svg" alt="winners").frame-cup__image
+                    img(src="static/images/common/cup-bottom.svg" alt="winners bottom").frame-cup__bottom
+                    img(src="static/images/common/meduza.svg" alt="").frame-cup__jelly.c-jelly-1
+                    img(src="static/images/common/meduza.svg" alt="").frame-cup__jelly.c-jelly-2
+                    img(src="static/images/common/meduza.svg" alt="").frame-cup__jelly.c-jelly-3
+                span.map__text.small Победители
+    include ../functional/pines

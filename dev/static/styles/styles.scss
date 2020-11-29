@@ -2,6 +2,7 @@
 @import "utils/vars";
 @import "utils/fonts";
 @import "utils/mixins";
+@import "utils/animation";
 //@include sprites($spritesheet-sprites);
 
 html {
@@ -40,7 +41,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
     @include flex-setting(column, flex-start, center);
 
-    padding: 1.25rem 1rem;
+    padding: 2.5rem 1rem 1.25rem 1rem;
 }
 
 ol, ul {

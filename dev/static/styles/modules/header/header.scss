@@ -46,6 +46,18 @@
         }
     }
 
+    &.step-4 {
+        .header__info-description {
+            display: none;
+
+            &.step-4 {
+                max-width: 255px;
+                display: inline-flex;
+                margin-bottom: 0.875rem;
+            }
+        }
+    }
+
     &__logo {
         width: 100%;
         @include flex-setting(column, flex-start, center);

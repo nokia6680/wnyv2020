@@ -1,9 +1,19 @@
 @import "footer/footer";
 @import "header/header";
+
+@import "bg/stars";
+@import "bg/ball";
+@import "bg/pines";
 @import "intro/intro";
 @import "intro/i-images";
+
+@import "map/map";
+@import "map/m-list";
+
 @import "choose/choose";
-@import "choose/stars";
 
 @import "player/player";
 @import "player/controls";
+
+@import "final/form";
+@import "final/visuals";

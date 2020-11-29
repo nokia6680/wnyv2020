@@ -6,6 +6,8 @@
     margin-top: auto;
     margin-bottom: 0;
 
+    z-index: 5;
+
     &__nav {
         width: 100%;
         @include flex-setting(row, space-between, center);

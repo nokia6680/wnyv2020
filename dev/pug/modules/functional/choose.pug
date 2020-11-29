@@ -1,60 +1,27 @@
 section.choose
-    .choose__stars.stars
-        svg.stars__ball.b1
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b2
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b3
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b4
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b5
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b6
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b7
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b8
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b9
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b10
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b11
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b12
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b13
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b14
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b15
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b16
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-        svg.stars__ball.b17
-            circle(cx="2" cy="2" r="1" stroke="#fffcfc" fill="#fffcfc" stroke-width="0")
-    .choose__elements.elements
+    include ../functional/ball
+    
+    .choose__elements
         // Left
-        .elements__block.el-left
-            .elements__frame.el-ball
-                img(src="static/images/common/3-ball.svg" alt="").elements__image
-            .elements__frame.el-ball-2
-                img(src="static/images/common/3-ball-2.svg" alt="").elements__image
-            .elements__frame.el-figure
-                img(src="static/images/common/3-figure.svg" alt="").elements__image
-            .elements__frame.el-tube
-                img(src="static/images/common/3-tube.svg" alt="").elements__image
+        .choose__elements-block.el-left
+            .choose__elements-frame.el-ball
+                img(src="static/images/common/3-ball.svg" alt="").choose__elements-image
+            .choose__elements-frame.el-ball-2
+                img(src="static/images/common/3-ball-2.svg" alt="").choose__elements-image
+            .choose__elements-frame.el-figure
+                img(src="static/images/common/3-figure.svg" alt="").choose__elements-image
+            .choose__elements-frame.el-tube
+                img(src="static/images/common/3-tube.svg" alt="").choose__elements-image
         // Right
-        .elements__block.el-right
-            .elements__frame.el-ball
-                img(src="static/images/common/3-ball.svg" alt="").elements__image
-            .elements__frame.el-ball-2
-                img(src="static/images/common/3-ball-2.svg" alt="").elements__image
-            .elements__frame.el-figure
-                img(src="static/images/common/3-figure.svg" alt="").elements__image
-            .elements__frame.el-tube
-                img(src="static/images/common/3-tube.svg" alt="").elements__image
+        .choose__elements-block.el-right
+            .choose__elements-frame.el-ball
+                img(src="static/images/common/3-ball.svg" alt="").choose__elements-image
+            .choose__elements-frame.el-ball-2
+                img(src="static/images/common/3-ball-2.svg" alt="").choose__elements-image
+            .choose__elements-frame.el-figure
+                img(src="static/images/common/3-figure.svg" alt="").choose__elements-image
+            .choose__elements-frame.el-tube
+                img(src="static/images/common/3-tube.svg" alt="").choose__elements-image
                 
     .choose__wrapper
         .choose__slider
