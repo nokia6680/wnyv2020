@@ -58,6 +58,12 @@
         }
     }
 
+    &.step-5 {
+        .header__info-description {
+            display: none;
+        }
+    }
+
     &__logo {
         width: 100%;
         @include flex-setting(column, flex-start, center);

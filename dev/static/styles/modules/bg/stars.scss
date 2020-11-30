@@ -17,7 +17,9 @@
         &.s-4,
         &.s-8,
         &.s-11,
-        &.s-14 {
+        &.s-14,
+        &.s-16,
+        &.s-19 {
             width: 12px;
             height: 12px;
         }
@@ -36,7 +38,9 @@
         &.s-10,
         &.s-12,
         &.s-13,
-        &.s-15 {
+        &.s-15,
+        &.s-17,
+        &.s-18 {
             width: 14px;
             height: 14px;
         }
@@ -47,7 +51,8 @@
         &.s-6,
         &.s-9,
         &.s-14,
-        &.s-15 {
+        &.s-15,
+        &.s-17 {
             fill: #e154bb;
         }
 
@@ -56,7 +61,10 @@
         &.s-4,
         &.s-8,
         &.s-10,
-        &.s-12 {
+        &.s-12,
+        &.s-16,
+        &.s-18,
+        &.s-19 {
             fill: #fff;
         }
 
@@ -156,6 +164,16 @@
             bottom: 3rem;
             right: 1rem;
             animation: glow-purple 1s infinite linear;
+        }
+
+        &.s-16,
+        &.s-18,
+        &.s-19 {
+            animation: glow-white 3s infinite linear;
+        }
+
+        &.s-17 {
+            animation: glow-purple 3s infinite linear;
         }
     }
 }

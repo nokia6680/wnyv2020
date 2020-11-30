@@ -126,14 +126,13 @@
 
     &__elements {
         width: 100%;
+        max-width: 360px;
         height: 140px;
         position: fixed;
         top: 27rem;
         left: 0;
         right: 0;
         bottom: 0;
-
-        background-color: rgba(255, 255, 255, 0.2);
 
         &-block.el-right {
             display: none;
@@ -151,24 +150,54 @@
             &.el-disk {
                 width: 30px;
                 height: 30px;
+
+                top: 1rem;
+                left: 2rem;
+
+                .player__elements-image {
+                    @include glowBox(glow-o-2, 238, 214, 1, 0.75, 2.8s, 0.1s);
+                }
             }
 
             &.el-star {
                 width: 34px;
                 height: 33px;
+
+                top: 5.5rem;
+                left: 3rem;
+
+                transform: rotate(-22deg);
+
+                .player__elements-image {
+                    @include glowBox(glow-p-2, 166, 50, 108, 0.8, 2.5s, 0.5s);
+                }
             }
 
             &.el-tree {
                 width: 29px;
                 height: 38px;
                 transform: rotate(-22deg);
+
+                top: 5.5rem;
+                right: 3.5rem;
+
+                .player__elements-image {
+                    @include glowBox(glow-w-2, 255, 255, 255, 0.75, 2.2s, 0.8s);
+                }
             }
 
             &.el-cone {
                 width: 37px;
                 height: 43px;
 
-                transition: rotate(22deg);
+                transform: rotate(90deg);
+
+                top: 0.625rem;
+                right: 1.125rem;
+
+                .player__elements-image {
+                    @include glowBox(glow-do-2, 207, 70, 2, 0.8, 2.3s, 0.5s);
+                }
             }
         }
 
@@ -185,6 +214,57 @@
         left: 0;
         right: 0;
         bottom: 0;
+
+        .b-1 {
+            top: 1.125rem;
+            left: 5rem;
+        }
+
+        .b-2 {
+            top: 0.875rem;
+            left: 12rem;
+        }
+
+        .b-3 {
+            top: 1rem;
+            right: 4.875rem;
+        }
+
+        .b-4 {
+            top: 3.75rem;
+            right: 0.625rem;
+        }
+
+        .b-5 {
+            top: 3.5rem;
+            left: 1.125rem;
+        }
+
+        .b-6 {
+            top: 5.75rem;
+            right: 2rem;
+        }
+
+        .b-7 {
+            top: 6.25rem;
+            left: 1.75rem;
+        }
+
+        .b-8 {
+            top: 7rem;
+            left: 6.5rem;
+        }
+
+        .b-9 {
+            top: 6rem;
+            left: 11rem;
+        }
+
+        .b-10 {
+            top: 6.5rem;
+            right: 8rem;
+            left: auto;
+        }
 
         .b-11,
         .b-12,

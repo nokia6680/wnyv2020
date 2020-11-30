@@ -16,7 +16,7 @@
         }
 
         50% {
-          filter: drop-shadow(0 0 0 rgb($red, $green, $blue)) drop-shadow(0 0 0 rgb($red, $green, $blue)) drop-shadow(0 0 4px rgba($red, $green, $blue, ($opacity - 0.12))) drop-shadow(0 0 6px rgba($red, $green, $blue, ($opacity + 0.2)));
+          filter: drop-shadow(0 0 0 rgb($red, $green, $blue)) drop-shadow(0 0 0 rgb($red, $green, $blue)) drop-shadow(0 0 2px rgba($red, $green, $blue, ($opacity - 0.12))) drop-shadow(0 0 4px rgba($red, $green, $blue, ($opacity + 0.2)));
         }
 
         100% {
