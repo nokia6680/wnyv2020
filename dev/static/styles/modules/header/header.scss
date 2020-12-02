@@ -2,6 +2,14 @@
     width: 100%;
 
     @include flex-setting(column, flex-start, center);
+    margin-bottom: 1rem;
+
+    &.invisible {
+        opacity: 0;
+        display: none;
+        pointer-events: none;
+        transition: opacity 0.25s linear;
+    }
 
     &__wrapper {
         width: 100%;
@@ -12,55 +20,11 @@
         .header__return {
             display: none;
         }
-
-        .header__info {
-            display: none;
-        }
     }
 
     &.step-2 {
-        margin-bottom: 0.875rem;
-
         .header__return {
             display: inline-flex;
-        }
-
-        .header__info-description {
-            display: none;
-
-            &.step-2 {
-                display: inline-flex;
-            }
-        }
-    }
-
-    &.step-3 {
-        .header__info-description {
-            display: none;
-
-            &.step-3 {
-                max-width: 288px;
-                display: inline-flex;
-                margin-bottom: 0.875rem;
-            }
-        }
-    }
-
-    &.step-4 {
-        .header__info-description {
-            display: none;
-
-            &.step-4 {
-                max-width: 255px;
-                display: inline-flex;
-                margin-bottom: 0.875rem;
-            }
-        }
-    }
-
-    &.step-5 {
-        .header__info-description {
-            display: none;
         }
     }
 
@@ -79,6 +43,7 @@
         justify-content: center;
         align-items: center;
 
+        height: 10px;
         max-height: 10px;
 
         margin-bottom: 0.5rem;
@@ -87,7 +52,6 @@
             width: 100%;
             height: 100%;
             max-height: inherit;
-
             object-fit: contain;
 
             filter: drop-shadow(0px 0px 4px rgba(255, 103, 0, 0.5));
@@ -96,6 +60,7 @@
 
     &__title {
         width: 100%;
+        height: 26px;
         max-height: 26px;
 
         @include flex-setting(column, center, center);
@@ -103,7 +68,7 @@
         &-image {
             width: 100%;
             height: 100%;
-
+            min-height: 10px;
             max-height: inherit;
             object-fit: contain;
 
@@ -116,8 +81,6 @@
         width: 100%;
 
         @include flex-setting(row, space-between, center);
-
-        margin-bottom: 1rem;
     }
 
     &__progress {
@@ -164,16 +127,5 @@
         background-repeat: no-repeat;
 
         box-shadow: 0px 0px 30px 15px rgba(163, 160, 160, 0.2) inset;
-    }
-
-    &__info {
-        @include flex-setting(column, flex-start, center);
-        order: 3;
-
-        &-description {
-            @include font-setting($primary-font, 0.75rem, normal, 500, $text-white);
-            text-align: center;
-            text-shadow: 0px 0px 8px rgba(255,255,255,0.65);
-        }
     }
 }

@@ -1,7 +1,21 @@
 .tv {
     width: 100%;
 
-    @include flex-setting(column, flex-start, center);
+    &.visible {
+        @include flex-setting(column, flex-start, center);
+        opacity: 1;
+        height: 100%;
+
+        pointer-events: all;
+        transition: height 0.25s linear 0.25s, opacity 0.25s linear 0.5s;
+    }
+
+    &.invisible {
+        pointer-events: none;
+        transition: height 0.25s linear 0.25s, opacity 0.25s linear;
+        opacity: 0;
+        height: 0;
+    }
 
     &__wrapper {
         width: 100%;
@@ -228,4 +242,22 @@
             box-shadow: 0 0 5px 1px rgba(205, 7, 24, 0.57), 0 0 5px 1px rgba(205, 7, 24, 0.57) inset;
         }
     }
+}
+
+@media only screen and (max-height: 590px) {
+    .tv {
+        &__info {
+            &-link {
+                width: 132px;
+                height: 24px;
+
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &__visual {
+            margin-bottom: 1.25rem;
+        }
+    }
+
 }

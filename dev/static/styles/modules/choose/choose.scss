@@ -1,12 +1,37 @@
 .choose {
     width: 100%;
 
-    @include flex-setting(column, flex-start, center);
+    &.visible {
+        @include flex-setting(column, flex-start, center);
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+
+        pointer-events: all;
+        transition: height 0.25s linear 0.25s, width 0.25s linear 0.5s, opacity 0.25s linear 0.5s;
+    }
+
+    &.invisible {
+        @include flex-setting(column, flex-start, center);
+        pointer-events: none;
+        transition: height 0.25s linear 0.25s, width 0.25s linear 0.25s, opacity 0.25s linear;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
 
     &__wrapper {
         width: 100%;
 
         @include flex-setting(column, flex-start, center);
+    }
+
+    &__description {
+        @include font-setting($primary-font, 0.75rem, normal, 500, $text-white);
+        text-align: center;
+        text-shadow: 0px 0px 8px rgba(255,255,255,0.65);
+
+        margin-bottom: 1rem;
     }
 
     &__slider {
@@ -251,6 +276,8 @@
         right: 0;
         bottom: 0;
 
+        z-index: -1;
+
         &-block.el-right {
             display: none;
         }
@@ -321,6 +348,183 @@
             height: inherit;
 
             object-fit: contain;
+        }
+    }
+}
+
+@media only screen and (max-height: 590px) {
+    .choose {
+        &__slider {
+            max-height: 218px;
+            margin-bottom: 0.5rem;
+        }
+
+        &__list {
+
+            max-width: 218px;
+            max-height: 218px;
+
+            border-radius: 109px;
+
+            padding: 0.5rem 0.5rem;
+
+            .slick-dots {
+                bottom: -2.875rem;
+            }
+        }
+
+        &__item {
+            width: 198px;
+            height: 198px;
+
+            max-width: 198px;
+            max-height: 198px;
+
+            border-radius: 99px;
+        }
+
+        &__image {
+            max-height: 180px;
+            object-fit: contain;
+        }
+
+        &__name {
+            @include font-setting($primary-font, 1rem, normal, 800, $text-white);
+            font-style: italic;
+            margin-bottom: 1.875rem;
+        }
+
+        &__submit {
+            @include flex-setting(column, center, center);
+            @include font-setting($secondary-font, 0.75rem, 1, 700, $text-black);
+
+            text-transform: uppercase;
+            text-decoration: none;
+
+            background-color: #cac8c8;
+            border: none;
+            border-radius: 25px;
+
+            width: 146px;
+            height: 40px;
+
+            box-shadow: 0px -5px 5px 5px rgba(154, 151, 151, 0.7) inset;
+
+            position: relative;
+
+            transition: 0.2s linear;
+
+            &:hover,
+            &:active,
+            &:focus {
+                box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2) inset, 0px -2px 5px 2px rgba(154, 151, 151, 0.7) inset;
+                transition: 0.2s linear;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+
+                width: 158px;
+                height: 52px;
+
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+
+                background-color: transparent;
+                border: 1px solid #cac8c8;
+                border-radius: 26px;
+
+                box-shadow: 0 0 5px 0px rgba(153, 228, 35, 0.57), 0 0 5px 0px rgba(153, 228, 35, 0.57) inset;
+            }
+        }
+
+        &__elements {
+            padding: 10rem 1.5rem 12rem 1.5rem;
+
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            z-index: -1;
+
+            &-block.el-right {
+                display: none;
+            }
+
+            &-block.el-left {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+
+            &-frame {
+                position: absolute;
+
+                &.el-ball {
+                    width: 35px;
+                    height: 42px;
+
+                    top: 0.625rem;
+                    left: 0.625rem;
+                    transform: rotate(-44deg);
+
+                    .choose__elements-image {
+                        @include glowBox(glow-red, 219, 30, 71, 0.8, 3s, 0s);
+                    }
+                }
+
+                &.el-ball-2 {
+                    width: 34px;
+                    height: 37px;
+
+                    top: 14.75rem;
+                    right: 0.625rem;
+
+                    .choose__elements-image {
+                        @include glowBox(glow-y, 231, 201, 1, 0.8, 2.5s, 0.5s);
+                    }
+                }
+
+                &.el-figure {
+                    width: 34px;
+                    height: 43px;
+
+                    top: 14.875rem;
+                    left: 0.75rem;
+
+                    transform: rotate(-22deg);
+
+                    .choose__elements-image {
+                        @include glowBox(glow-w, 255, 255, 255, 0.7, 2.8s, 1s);
+                    }
+                }
+
+                &.el-tube {
+                    width: 30px;
+                    height: 40px;
+
+                    top: 0.875rem;
+                    right: 0.625rem;
+
+                    .choose__elements-image {
+                        @include glowBox(glow-o, 224, 84, 2, 0.7, 2s, 1s);
+                    }
+                }
+            }
+
+            .choose__elements-image {
+                width: inherit;
+                height: inherit;
+
+                object-fit: contain;
+            }
         }
     }
 }

@@ -1,13 +1,31 @@
 .final {
     width: 100%;
-    @include flex-setting(column, flex-start, center);
+
+    &.visible {
+        @include flex-setting(column, flex-start, center);
+        opacity: 1;
+        height: 100%;
+
+        pointer-events: all;
+        transition: height 0.25s linear 0.25s, opacity 0.25s linear 0.5s;
+    }
+
+    &.invisible {
+        @include flex-setting(column, flex-start, center);
+        pointer-events: none;
+        transition: height 0.25s linear 0.25s, opacity 0.25s linear;
+        opacity: 0;
+        height: 0;
+    }
 
     &__stars {
         position: fixed;
 
-        top: 11rem;
-        left: 0;
-        right: 0;
+        z-index: -1;
+
+        top: 10rem;
+        left: auto;
+        right: auto;
         bottom: 4rem;
 
         width: 100%;
@@ -94,5 +112,19 @@
                 right: 1rem;
             }
         }
+    }
+
+    &__wrapper {
+        width: 100%;
+        @include flex-setting(column, flex-start, center);
+    }
+
+    &__description {
+        @include font-setting($primary-font, 0.75rem, normal, 500, $text-white);
+        text-align: center;
+        text-shadow: 0px 0px 8px rgba(255,255,255,0.65);
+
+        margin-bottom: 1rem;
+        max-width: 80%;
     }
 }

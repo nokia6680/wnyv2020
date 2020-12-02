@@ -20,8 +20,15 @@ html(lang="ru-RU")
 	body
 		.main-wrapper
 			include ../modules/header/header
-			include ../modules/functional/prize
-			include ../modules/functional/howto
+			main.main
+				include ../modules/functional/intro
+				include ../modules/functional/map
+				include ../modules/functional/choose
+				include ../modules/functional/player
+				include ../modules/functional/final
+				include ../modules/functional/tv
+				include ../modules/functional/prize
+				include ../modules/functional/howto
 			include ../modules/footer/footer
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")

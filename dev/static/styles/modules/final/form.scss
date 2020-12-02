@@ -1,5 +1,6 @@
 .form {
     width: 100%;
+    max-width: 324px;
 
     @include flex-setting(column, flex-start, center);
 
