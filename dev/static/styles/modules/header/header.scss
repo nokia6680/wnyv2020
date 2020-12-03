@@ -203,6 +203,8 @@
             cursor: pointer;
             outline: none;
 
+            z-index: 10;
+
             &::after {
                 position: absolute;
                 content: '';
@@ -234,6 +236,14 @@
                 }
 
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .header {
+        &__controls {
+            max-width: 1010px;
         }
     }
 }

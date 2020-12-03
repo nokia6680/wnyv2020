@@ -1030,9 +1030,60 @@
                 }
             }
         }
+    }
+}
 
-        &__text {
-            display: none;
+@media only screen and (min-width: 1366px) {
+    .map {
+        max-width: 870px;
+
+        &__description {
+            top: -6rem;
+            max-width: 275px;
+        }
+
+        &__list {
+            max-width: 870px;
+        }
+
+        &__item {
+            &.stage-1 {
+                &::after {
+                    transform: rotate(25deg);
+
+                    bottom: -0.875rem;
+                    right: -7.5rem;
+                }
+            }
+
+            &.link-1 {
+                margin-top: -1.25rem;
+            }
+
+            &.stage-2 {
+                margin-top: -3.5rem;
+
+                &::after {
+                    transform: rotate(155deg);
+
+                    top: 4.325rem;
+                    right: -2.5rem;
+                }
+            }
+
+            &.stage-3 {
+                margin-top: 0rem;
+
+                .map__link {
+                    align-items: flex-end;
+                    width: auto;
+                }
+
+                .map__text {
+                    margin-top: 0.25rem;
+                    margin-right: 1.25rem;
+                }
+            }
         }
     }
 }

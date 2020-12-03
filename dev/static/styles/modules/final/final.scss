@@ -160,6 +160,23 @@
             align-self: center;
             font-size: 0.813rem;
             margin-bottom: 0;
+            max-width: 37%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .final {
+        &__wrapper {
+            margin-top: -4rem;
+            grid-template-columns: 300px 420px;
+            grid-column-gap: 4rem;
+
+            max-width: 780px;
+        }
+
+        &__description {
+            max-width: 37%;
         }
     }
 }

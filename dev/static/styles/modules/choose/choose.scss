@@ -823,3 +823,92 @@
     }
 
 }
+
+@media only screen and (min-width: 1366px) {
+    .choose {
+        margin-top: -2.375rem;
+
+        &__list {
+            min-height: 330px;
+            max-height: 330px;
+        }
+
+        &__slider {
+            margin-bottom: 1.25rem;
+        }
+
+        &__item {
+            &.hero-4 {
+                margin-top: auto;
+                margin-bottom: 0;
+            }
+
+            &.hero-5 {
+                margin-top: auto;
+                margin-bottom: 0;
+            }
+        }
+
+        &__elements {
+            padding: 0;
+            width: 100%;
+            max-width: 854px;
+            height: 335px;
+            top: 15rem;
+            left: auto;
+            right: auto;
+
+            &-block.el-right {
+                .choose__elements-frame {
+                    &.el-ball {
+                        top: auto;
+                        bottom: 0;
+                        right: 11.125rem;
+                    }
+
+                    &.el-ball-2 {
+                        top: 8.25rem;
+                        right: 8.5rem;
+                    }
+
+                    &.el-figure {
+                        top: auto;
+                        bottom: 4rem;
+                        right: 0rem;
+                    }
+
+                    &.el-tube {
+                        top: 0rem;
+                        right: 1.625rem;
+                    }
+                }
+            }
+
+            &-block.el-left {
+                .choose__elements-frame {
+                    &.el-ball {
+                        top: 0rem;
+                        left: 1.625rem;
+                    }
+
+                    &.el-ball-2 {
+                        top: auto;
+                        bottom: 0;
+                        left: 11.125rem;
+                    }
+
+                    &.el-figure {
+                        top: 8.25rem;
+                        left: 8.5rem;
+                    }
+
+                    &.el-tube {
+                        top: auto;
+                        bottom: 4rem;
+                        left: 0rem;
+                    }
+                }
+            }
+        }
+    }
+}

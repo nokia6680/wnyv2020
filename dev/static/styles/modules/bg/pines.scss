@@ -24,7 +24,7 @@
         position: absolute;
         transform: scale(1);
         will-change: transform;
-        filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 6px #fff);
+        filter: drop-shadow(0 0 0 #fff)  drop-shadow(0 0 0 #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 0 6px #fff);
 
         &.p-1,
         &.p-12 {
@@ -338,6 +338,109 @@
             &.p-15 {
                 bottom: 2rem;
                 right: 17rem;
+            }
+
+            &.p-16 {
+                bottom: 5rem;
+                left: 5rem;
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .pines {
+        padding: 10.5rem 0rem 0rem 0rem;
+
+        &__wrapper {
+            max-height: 420px;
+            max-width: 920px;
+        }
+
+        &__item {
+            &.p-1 {
+                top: 4rem;
+                left: 3rem;
+            }
+
+            &.p-2 {
+                width: 17px;
+                height: 25px;
+                top: 0rem;
+                left: 15.625rem;
+            }
+
+            &.p-3 {
+                top: 0rem;
+                right: 12.5rem;
+            }
+
+            &.p-4 {
+                top: 3.625rem;
+                left: 28.25rem;
+            }
+
+            &.p-5 {
+                top: 7.5rem;
+                right: 0.5rem;
+            }
+
+            &.p-6 {
+                top: 14.875rem;
+                right: 0rem;
+            }
+
+            &.p-7 {
+                width: 40px;
+                height: 56px;
+                top: 6rem;
+                left: 14rem;
+            }
+
+            &.p-8 {
+                top: 10rem;
+                right: 10rem;
+            }
+
+            &.p-9 {
+                top: 17.25rem;
+                right: 16.5rem;
+            }
+
+            &.p-10 {
+                top: 12rem;
+                left: 2rem;
+            }
+
+            &.p-11 {
+                bottom: 8.75rem;
+                right: 23.625rem;
+            }
+
+            &.p-12 {
+                bottom: 4rem;
+                right: 3rem;
+            }
+
+            &.p-13 {
+                top: auto;
+                bottom: 8rem;
+                left: 14.25rem;
+                width: 29px;
+                height: 42px;
+            }
+
+            &.p-14 {
+                bottom: 3rem;
+                left: 21.625rem;
+            }
+
+            &.p-15 {
+                width: 32px;
+                height: 45px;
+                bottom: 3.25rem;
+                right: 21rem;
             }
 
             &.p-16 {

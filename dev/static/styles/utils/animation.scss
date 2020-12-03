@@ -42,6 +42,28 @@
     }
 }
 
+@keyframes plane-moving {
+    0% {
+        transform: translateX(-0.125rem) translateY(-0.125rem) skewY(2deg) rotate(-22deg) scale(-1, 1);
+    }
+
+    25% {
+        transform: translateX(0.125rem) translateY(0.125rem) skewY(-2deg) skewX(-3deg) rotate(-12deg) scale(-1, 1);
+    }
+
+    50% {
+        transform: translateX(0.125rem) translateY(0.25rem) skewY(2deg) rotate(0deg) scale(-1, 1);
+    }
+
+    75% {
+        transform: translateX(-0.125rem) translateY(-0.125rem) skewX(3deg) skewY(2deg) rotate(12deg) scale(-1, 1);
+    }
+
+    100% {
+        transform: translateX(-0.125rem) translateY(-0.125rem) skewY(2deg) rotate(-22deg) scale(-1, 1);
+    }
+}
+
 @keyframes box-rotate {
     0% {
         transform: rotate(-22deg) scale(1);
@@ -61,6 +83,50 @@
 
     100% {
         transform: rotate(-22deg) scale(1);
+    }
+}
+
+@keyframes ball-color-blink {
+    0% {
+        fill: #e70d2a;
+    }
+
+    25% {
+        fill: #fff200;
+    }
+
+    50% {
+        fill: #e70d2a;
+    }
+
+    75% {
+        fill: #fff200;
+    }
+
+    100% {
+        fill: #e70d2a;
+    }
+}
+
+@keyframes ball-color-blink-invert {
+    0% {
+        fill: #fff200;
+    }
+
+    25% {
+        fill: #e70d2a;
+    }
+
+    50% {
+        fill: #fff200;
+    }
+
+    75% {
+        fill: #e70d2a;
+    }
+
+    100% {
+        fill: #fff200;
     }
 }
 
