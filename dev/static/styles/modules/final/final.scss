@@ -128,3 +128,38 @@
         max-width: 80%;
     }
 }
+
+@media only screen and (min-width: 768px) {
+    .final {
+        &__stars {
+            display: none;
+        }
+
+        &__wrapper {
+            position: relative;
+
+            width: 100%;
+            display: grid;
+            grid-template-areas:
+                'title title'
+                'form visual'
+            ;
+
+            grid-template-columns: 300px 420px;
+            grid-column-gap: 1.25rem;
+            justify-content: center;
+            align-items: center;
+
+            max-width: 740px;
+        }
+
+        &__description {
+            justify-self: center;
+            margin: 0 auto;
+            grid-area: title;
+            align-self: center;
+            font-size: 0.813rem;
+            margin-bottom: 0;
+        }
+    }
+}

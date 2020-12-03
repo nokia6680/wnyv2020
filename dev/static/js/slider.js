@@ -4,7 +4,7 @@ $(window).on('resize', function(e){
   // Храним её в data
   var init = $(".choose__list").data('init-slider');
   // Если мобильный
-  if(window.innerWidth < 1366){
+  if(window.innerWidth < 768){
     // Если слайдер не запущен
     if(init != 1){
       // Запускаем слайдер и записываем в data init-slider = 1

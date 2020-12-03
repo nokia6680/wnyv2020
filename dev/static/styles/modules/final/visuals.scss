@@ -1,3 +1,426 @@
 .visuals {
     display: none;
 }
+
+@media only screen and (min-width: 768px) {
+    .visuals {
+        @include flex-setting(column, center, center);
+
+        grid-area: visual;
+
+        width: 100%;
+        height: 100%;
+        max-width: 420px;
+        max-height: 480px;
+
+        position: relative;
+
+        .figures {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            &__jelly-1 {
+                position: absolute;
+                width: 37px;
+                height: 57px;
+
+                top: 3.25rem;
+                left: 5.375rem;
+
+                filter: drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 2px rgba(220, 3, 72, 0.7)) drop-shadow(0 0 3px #dc03ac);
+
+                animation: jelly-moving 8s linear infinite both;
+            }
+
+            &__jelly-2 {
+                position: absolute;
+                width: 25px;
+                height: 34px;
+                left: 0;
+                top: 10rem;
+
+                filter: drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 2px rgba(220, 3, 72, 0.7)) drop-shadow(0 0 3px #dc03ac);
+
+                animation: jelly-moving 10s linear infinite both reverse;
+            }
+
+            &__jelly-3 {
+                position: absolute;
+                width: 31px;
+                height: 44px;
+                top: 12.325rem;
+                right: 4rem;
+
+                filter: drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 2px rgba(220, 3, 72, 0.7)) drop-shadow(0 0 3px #dc03ac);
+
+                animation: jelly-moving 8s linear infinite both;
+            }
+
+            &__jelly-4 {
+                position: absolute;
+                width: 32px;
+                height: 48px;
+                bottom: 5.5rem;
+                left: 4rem;
+
+                filter: drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 2px rgba(220, 3, 72, 0.7)) drop-shadow(0 0 3px #dc03ac);
+
+                animation: jelly-moving 10s ease-in-out infinite both;
+            }
+
+            &__jelly-5 {
+                position: absolute;
+                width: 24px;
+                height: 35px;
+                bottom: 9rem;
+                right: 0;
+
+                filter: drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 2px rgba(220, 3, 72, 0.7)) drop-shadow(0 0 3px #dc03ac);
+
+                animation: jelly-moving 10s linear infinite both reverse;
+            }
+
+            &__gift-1 {
+                position: absolute;
+                width: 53px;
+                height: 46px;
+
+                top: 5.5rem;
+                right: 1.5rem;
+
+                filter: drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 2px rgba(255, 108, 0, 0.7)) drop-shadow(0 0 4px #ff6c00);
+                animation: box-rotate 12s linear infinite both;
+            }
+
+            &__gift-2 {
+                position: absolute;
+                width: 44px;
+                height: 38px;
+
+                bottom: 12rem;
+                left: 2.5rem;
+
+                filter: drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 2px rgba(255, 108, 0, 0.7)) drop-shadow(0 0 4px #ff6c00);
+                animation: box-rotate 12s ease-in-out infinite both;
+            }
+
+            &__gift-3 {
+                position: absolute;
+                width: 41px;
+                height: 38px;
+
+                bottom: 3.25rem;
+                right: 3.125rem;
+
+                filter: drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 2px rgba(255, 108, 0, 0.7)) drop-shadow(0 0 4px #ff6c00);
+                animation: box-rotate 14s linear infinite both reverse;
+            }
+        }
+
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            &__ball {
+                position: absolute;
+                @include flex-setting(column, center, center);
+
+                animation: scale linear infinite both;
+                filter: drop-shadow(0 0 0 #7fb537) drop-shadow(0 0 4px #7fb537);
+            }
+
+            .b1 {
+                width: 7px;
+                height: 7px;
+                top: 3rem;
+                left: 1.25rem;
+
+                animation-duration: 4s;
+                animation-delay: 0;
+            }
+
+            .b2 {
+                width: 14px;
+                height: 14px;
+
+                top: 2.25rem;
+                right: 6.75rem;
+
+                animation-duration: 6s;
+                animation-delay: 0.4;
+            }
+
+            .b3 {
+                width: 8px;
+                height: 8px;
+                top: 7.75rem;
+                left: 4.75rem;
+
+                animation-duration: 8s;
+                animation-delay: 0.2;
+            }
+
+            .b4 {
+                width: 8px;
+                height: 8px;
+
+                top: 9rem;
+                right: 0;
+
+                animation-duration: 6s;
+                animation-delay: 0;
+            }
+
+            .b5 {
+                width: 7px;
+                height: 7px;
+                bottom: 12.375rem;
+                left: 8.125rem;
+
+                animation-duration: 10s;
+                animation-delay: 0.6;
+            }
+
+            .b6 {
+                bottom: 6rem;
+                left: 0;
+                width: 6px;
+                height: 6px;
+
+                animation-duration: 10s;
+                animation-delay: 0.2;
+            }
+
+            .b7 {
+                bottom: 1rem;
+                left: 5rem;
+                width: 9px;
+                height: 9px;
+
+                animation-duration: 4s;
+                animation-delay: 0;
+            }
+
+            .b8 {
+                width: 14px;
+                height: 14px;
+
+                right: 11.125rem;
+                bottom: 3.75rem;
+                z-index: 2;
+
+                animation-duration: 12s;
+                animation-delay: 0.3;
+            }
+
+            .b9 {
+                width: 20px;
+                height: 20px;
+
+                bottom: -1.5rem;
+                right: 8.25rem;
+
+                animation-duration: 10s;
+                animation-delay: 0;
+            }
+        }
+
+        .rocket {
+            position: relative;
+            width: 100%;
+            max-width: 184px;
+            height: 100%;
+            max-height: 450px;
+            @include flex-setting(column, flex-start, center);
+
+            &__top {
+                width: 133px;
+                height: 149px;
+
+                z-index: 4;
+
+                position: relative;
+
+                margin-bottom: 1.5rem;
+                transition: 0.2s linear;
+
+                &-image {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                }
+
+                &-shape {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                    filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 2px #fff);
+                }
+            }
+
+            &__body {
+                height: 128px;
+                width: 110px;
+
+                z-index: 3;
+
+                position: relative;
+                margin-bottom: 1rem;
+                transition: 0.2s linear;
+
+                &-image {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                }
+
+                &-shape {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                    filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 2px #fff);
+                }
+
+                &-trans {
+                    position: absolute;
+                    width: 67px;
+                    height: 79px;
+
+                    bottom: -3rem;
+                    right: -1.875rem;
+                }
+
+                &-cloud {
+                    position: absolute;
+                    width: 90px;
+                    height: 78px;
+
+                    bottom: -1.625rem;
+                    left: -4rem;
+
+                    filter: drop-shadow(0 0 0 #7fb537) drop-shadow(0 0 4px #7fb537);
+
+                    animation: clouds-moving 6s linear infinite both;
+                }
+            }
+
+            &__disk {
+                width: 75px;
+                height: 83px;
+
+                z-index: 2;
+                transition: 0.2s linear;
+
+                &-image {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                }
+
+                &-shape {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                    filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 2px #fff);
+                }
+            }
+
+            &__wings {
+                width: 184px;
+                height: 117px;
+
+                z-index: 1;
+
+                margin-bottom: 1rem;
+                transition: 0.2s linear;
+
+                position: relative;
+
+                &-image {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                }
+
+                &-shape {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                    filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 2px #fff);
+                }
+
+                &-cloud {
+                    position: absolute;
+                    width: 101px;
+                    height: 68px;
+
+                    top: -0.625rem;
+                    right: -3.5rem;
+                    z-index: -1;
+
+                    filter: drop-shadow(0 0 0 #7fb537) drop-shadow(0 0 4px #7fb537);
+                    animation: clouds-moving 8s linear infinite both reverse;
+                }
+            }
+
+            &__bottom {
+                width: 97px;
+                height: 68px;
+
+                z-index: 0;
+
+                margin-bottom: 2rem;
+                transition: 0.2s linear;
+
+                &-image {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                }
+
+                &-shape {
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+
+                    filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 2px #fff);
+
+                }
+            }
+
+            &:hover,
+            &.form-sent {
+                .rocket__top {
+                    transform: translateY(4rem);
+                    transition: 0.2s linear;
+                }
+                .rocket__body {
+                    transform: translateY(2rem);
+                    transition: 0.2s linear;
+                }
+
+                .rocket__wings {
+                    transform: translateY(-2rem);
+                    transition: 0.2s linear;
+                }
+
+                .rocket__bottom {
+                    transform: translateY(-4rem);
+                    transition: 0.2s linear;
+                }
+            }
+        }
+    }
+}

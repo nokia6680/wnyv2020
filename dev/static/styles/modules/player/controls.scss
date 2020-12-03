@@ -8,8 +8,6 @@
         @include flex-setting(row, flex-start, center);
 
         &.step-1 {
-            display: none;
-
             .controls__item {
                 margin-right: 0.625rem;
 
@@ -21,6 +19,8 @@
         }
 
         &.step-2 {
+            display: none;
+            
             .controls__item {
                 width: 100%;
                 margin-right: 0.75rem;
@@ -28,10 +28,6 @@
                 &.send {
                     margin-right: 0;
                 }
-            }
-
-            .controls__btn {
-                width: 100%;
             }
         }
     }
@@ -226,6 +222,110 @@
 
                 top: 50%;
                 right: 0.625rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .controls {
+        &__list {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+
+            &.step-1 {
+                .controls__item {
+                    width: auto;
+                    margin-right: 1rem;
+
+                    &.rec {
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &.step-2 {
+                justify-content: flex-start;
+
+                .controls__btn {
+                    width: auto;
+                }
+
+                .controls__item {
+                    width: auto;
+                    margin-right: 1.125rem;
+
+                    &.send {
+                        margin-right: 0;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            font-size: 0.688rem;
+            border-radius: 17px;
+            height: 34px;
+
+            padding: 0 2.625rem 0 1.5rem;
+
+            &.play {
+                &::after {
+                    width: 9px;
+                    height: 13px;
+
+                    top: 48%;
+                    right: 0.625rem;
+                }
+            }
+
+            &.pause {
+                &::after {
+                    width: 6px;
+                    height: 11px;
+
+                    top: 50%;
+                    right: 0.875rem;
+                }
+            }
+
+            &.listen {
+                width: 132px;
+
+                &::after {
+                    width: 9px;
+                    height: 13px;
+
+                    top: 50%;
+                    right: 0.625rem;
+                }
+            }
+
+
+            &.repeat {
+                width: 142px;
+
+                &::after {
+                    width: 10px;
+                    height: 12px;
+
+                    top: 50%;
+                    right: 0.625rem;
+                }
+            }
+
+            &.send {
+                width: 120px;
+
+                &::after {
+                    width: 11px;
+                    height: 9px;
+
+                    top: 50%;
+                    right: 0.625rem;
+                }
             }
         }
     }

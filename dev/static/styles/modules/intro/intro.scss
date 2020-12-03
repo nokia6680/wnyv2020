@@ -9,9 +9,10 @@
     overflow: hidden;
 
     &.invisible {
+        margin: auto;
         opacity: 0;
         position: absolute;
-        transition: position 0.25s linear 0.25s, opacity 0.25s linear;
+        transition: opacity 0.25s linear;
         pointer-events: none;
     }
 

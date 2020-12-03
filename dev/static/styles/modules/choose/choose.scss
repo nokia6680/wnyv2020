@@ -95,12 +95,6 @@
         max-width: 248px;
         max-height: 248px;
 
-        border: 2px solid #fefefe;
-        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.2), 0 0 10px 3px rgba(255, 255, 255, 0.2) inset;
-        border-radius: 124px;
-
-        padding: 1rem 1rem;
-
         .slick-dots {
           @include flex-setting(row, center, center);
           margin: 0;
@@ -155,27 +149,34 @@
             }
           }
         }
+
+        &:not(.slick-initialized) {
+          visibility: hidden;
+          display: flex;
+          max-width: 100%;
+          overflow-y: hidden;
+          overflow-x: auto;
+
+          .slick-list {
+            height: 248px !important;
+          }
+        }
     }
 
     &__item {
-        width: 212px;
-        height: 212px;
+        max-width: 248px;
+        max-height: 248px;
 
-        max-width: 212px;
-        max-height: 212px;
+        border: 2px solid #fefefe;
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.2), 0 0 10px 3px rgba(255, 255, 255, 0.2) inset;
+        border-radius: 124px;
 
-        border-radius: 106px;
-
-        overflow: hidden;
+        padding: 1rem 1rem;
 
         display: flex !important;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
-
-        background: linear-gradient(135deg, #db1e47 50%, #b71437 50%);
-
-        position: relative;
 
         &.hero-1 {
             .choose__image {
@@ -205,6 +206,27 @@
                 max-height: 180px;
             }
         }
+    }
+
+    &__frame {
+        width: 212px;
+        height: 212px;
+
+        max-width: 212px;
+        max-height: 212px;
+
+        border-radius: 106px;
+
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        background: linear-gradient(135deg, #db1e47 50%, #b71437 50%);
+
+        position: relative;
     }
 
     &__image {
@@ -286,59 +308,52 @@
             position: relative;
             width: 100%;
             height: 100%;
-        }
 
-        &-frame {
-            position: absolute;
+            .choose__elements-frame {
+                position: absolute;
 
-            &.el-ball {
-                width: 35px;
-                height: 42px;
+                &.el-ball {
+                    width: 35px;
+                    height: 42px;
 
-                top: 0.625rem;
-                left: 0.625rem;
-                transform: rotate(-44deg);
+                    top: 0.625rem;
+                    left: 0.625rem;
+                    transform: rotate(-44deg);
 
-                .choose__elements-image {
-                    @include glowBox(glow-red, 219, 30, 71, 0.8, 3s, 0s);
+                    animation: glow-red-ball 3s linear infinite both;
                 }
-            }
 
-            &.el-ball-2 {
-                width: 34px;
-                height: 37px;
+                &.el-ball-2 {
+                    width: 34px;
+                    height: 37px;
 
-                top: 14.75rem;
-                right: 0.625rem;
+                    top: 14.75rem;
+                    right: 0.625rem;
 
-                .choose__elements-image {
-                    @include glowBox(glow-y, 231, 201, 1, 0.8, 2.5s, 0.5s);
+
+                    animation: glow-yellow 2s linear infinite both;
                 }
-            }
 
-            &.el-figure {
-                width: 34px;
-                height: 43px;
+                &.el-figure {
+                    width: 34px;
+                    height: 43px;
 
-                top: 14.875rem;
-                left: 0.75rem;
+                    top: 14.875rem;
+                    left: 0.75rem;
 
-                transform: rotate(-22deg);
+                    transform: rotate(-22deg);
 
-                .choose__elements-image {
-                    @include glowBox(glow-w, 255, 255, 255, 0.7, 2.8s, 1s);
+                    animation: glow-white 2s linear 0.2s infinite both;
                 }
-            }
 
-            &.el-tube {
-                width: 30px;
-                height: 40px;
+                &.el-tube {
+                    width: 30px;
+                    height: 40px;
 
-                top: 0.875rem;
-                right: 0.625rem;
+                    top: 0.875rem;
+                    right: 0.625rem;
 
-                .choose__elements-image {
-                    @include glowBox(glow-o, 224, 84, 2, 0.7, 2s, 1s);
+                    animation: glow-orange-ball 3s linear 0.5s infinite both;
                 }
             }
         }
@@ -360,20 +375,27 @@
         }
 
         &__list {
+            .slick-dots {
+                bottom: -2.875rem;
+            }
 
+            &:not(.slick-initialized) {
+              .slick-list {
+                height: 218px !important;
+              }
+            }
+        }
+
+        &__item {
             max-width: 218px;
             max-height: 218px;
 
             border-radius: 109px;
 
             padding: 0.5rem 0.5rem;
-
-            .slick-dots {
-                bottom: -2.875rem;
-            }
         }
 
-        &__item {
+        &__frame {
             width: 198px;
             height: 198px;
 
@@ -462,59 +484,59 @@
                 position: relative;
                 width: 100%;
                 height: 100%;
-            }
 
-            &-frame {
-                position: absolute;
+                .choose__elements-frame {
+                    position: absolute;
 
-                &.el-ball {
-                    width: 35px;
-                    height: 42px;
+                    &.el-ball {
+                        width: 35px;
+                        height: 42px;
 
-                    top: 0.625rem;
-                    left: 0.625rem;
-                    transform: rotate(-44deg);
+                        top: 0.625rem;
+                        left: 0.625rem;
+                        transform: rotate(-44deg);
 
-                    .choose__elements-image {
-                        @include glowBox(glow-red, 219, 30, 71, 0.8, 3s, 0s);
+                        .choose__elements-image {
+                            @include glowBox(glow-red, 219, 30, 71, 0.8, 3s, 0s);
+                        }
                     }
-                }
 
-                &.el-ball-2 {
-                    width: 34px;
-                    height: 37px;
+                    &.el-ball-2 {
+                        width: 34px;
+                        height: 37px;
 
-                    top: 14.75rem;
-                    right: 0.625rem;
+                        top: 14.75rem;
+                        right: 0.625rem;
 
-                    .choose__elements-image {
-                        @include glowBox(glow-y, 231, 201, 1, 0.8, 2.5s, 0.5s);
+                        .choose__elements-image {
+                            @include glowBox(glow-y, 231, 201, 1, 0.8, 2.5s, 0.5s);
+                        }
                     }
-                }
 
-                &.el-figure {
-                    width: 34px;
-                    height: 43px;
+                    &.el-figure {
+                        width: 34px;
+                        height: 43px;
 
-                    top: 14.875rem;
-                    left: 0.75rem;
+                        top: 14.875rem;
+                        left: 0.75rem;
 
-                    transform: rotate(-22deg);
+                        transform: rotate(-22deg);
 
-                    .choose__elements-image {
-                        @include glowBox(glow-w, 255, 255, 255, 0.7, 2.8s, 1s);
+                        .choose__elements-image {
+                            @include glowBox(glow-w, 255, 255, 255, 0.7, 2.8s, 1s);
+                        }
                     }
-                }
 
-                &.el-tube {
-                    width: 30px;
-                    height: 40px;
+                    &.el-tube {
+                        width: 30px;
+                        height: 40px;
 
-                    top: 0.875rem;
-                    right: 0.625rem;
+                        top: 0.875rem;
+                        right: 0.625rem;
 
-                    .choose__elements-image {
-                        @include glowBox(glow-o, 224, 84, 2, 0.7, 2s, 1s);
+                        .choose__elements-image {
+                            @include glowBox(glow-o, 224, 84, 2, 0.7, 2s, 1s);
+                        }
                     }
                 }
             }
@@ -527,4 +549,277 @@
             }
         }
     }
+}
+
+@media only screen and (min-width: 768px) {
+    .choose {
+        position: relative;
+
+        &__description {
+            position: absolute;
+            top: -4rem;
+
+            font-size: 0.813rem;
+
+            margin-bottom: 0;
+        }
+
+        &__slider {
+            max-height: 100%;
+            margin-bottom: 1.625rem;
+        }
+
+        &__prev,
+        &__next {
+            display: none;
+        }
+
+        &__list {
+            width: 100%;
+            height: 100%;
+
+            max-width: 530px;
+            max-height: 328px;
+
+            padding: 0;
+            overflow: visible;
+
+            @include flex-setting(row, center, flex-start);
+            flex-wrap: wrap;
+
+            &:not(.slick-initialized) {
+                @include flex-setting(row, center, flex-start);
+                flex-wrap: wrap;
+                visibility: visible;
+                opacity: 1;
+                overflow: visible;
+
+                max-width: 530px;
+                max-height: 328px;
+            }
+        }
+
+        &__item {
+            width: 100%;
+            height: 100%;
+
+            max-width: 156px;
+            max-height: 156px;
+
+            border-radius: 78px;
+            padding: 0.625rem 0.625rem;
+
+            border-color: rgba(255, 255, 255, 0.4);
+
+            position: relative;
+            transition: 0.2s linear;
+
+            &.selected {
+                border-color: #a0e03c;
+
+                .choose__frame {
+                    background: linear-gradient(135deg, #a0e03c 50%, #7ebb1f 50%);
+                }
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                border-color: rgba(255, 255, 255, 1);
+                transition: 0.2s linear;
+            }
+
+            &.hero-1 {
+                .choose__image {
+                    position: absolute;
+                    bottom: -2rem;
+                }
+            }
+
+            &.hero-2 {
+                margin-left: 1.875rem;
+                margin-right: 1.875rem;
+            }
+
+            &.hero-3 {
+                .choose__image {
+                    position: absolute;
+                    bottom: -2rem;
+                    max-height: 150px;
+                }
+            }
+
+            &.hero-4 {
+                margin-right: 0.937rem;
+
+                .choose__image {
+                    position: absolute;
+                    max-height: 120px;
+                }
+            }
+
+            &.hero-5 {
+                margin-left: 0.937rem;
+
+                .choose__image {
+                    position: absolute;
+                    max-height: 120px;
+                }
+            }
+        }
+
+        &__frame {
+            width: 132px;
+            height: 132px;
+
+            max-width: 132px;
+            max-height: 132px;
+
+            border-radius: 66px;
+        }
+
+        &__image {
+            max-height: 130px;
+        }
+
+        &__name {
+            font-size: 0.875rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &__submit {
+            font-size: 0.688rem;
+            border-radius: 15px;
+
+            min-height: 30px;
+            width: 112px;
+            height: 30px;
+
+            &::after {
+                width: 122px;
+                height: 40px;
+                border-radius: 20px;
+            }
+        }
+
+        &__elements {
+            padding: 15rem 1.5rem 12rem 1.5rem;
+            @include flex-setting(row, space-between, flex-start);
+
+            z-index: -1;
+
+            &-block.el-right {
+                display: flex;
+                position: relative;
+                width: 100%;
+                max-width: 224px;
+                height: 100%;
+                max-height: 340px;
+
+                .choose__elements-frame {
+                    position: absolute;
+
+                    &.el-ball {
+                        width: 42px;
+                        height: 50px;
+
+                        top: 14.75rem;
+                        right: 8.75rem;
+
+                        transform: rotate(-44deg);
+
+                        animation: glow-red-ball 3s linear infinite both;
+                    }
+
+                    &.el-ball-2 {
+                        width: 39px;
+                        height: 48px;
+
+                        top: 7.875rem;
+                        right: 4.75rem;
+
+                        animation: glow-yellow 2s linear infinite both;
+                    }
+
+                    &.el-figure {
+                        top: 12.875rem;
+                        right: -0.375rem;
+                        width: 40px;
+                        height: 52px;
+
+                        transform: rotate(-22deg);
+
+                        animation: glow-white 2s linear 0.2s infinite both;
+                    }
+
+                    &.el-tube {
+                        width: 39px;
+                        height: 41px;
+
+                        top: 12.875rem;
+                        right: auto;
+                        right: -0.375rem;
+
+                        top: 0.625rem;
+                        right: 0.625rem;
+
+                        transform: rotate(-24deg);
+
+                        animation: glow-orange-ball 3s linear 0.5s infinite both;
+                    }
+                }
+            }
+
+            &-block.el-left {
+                position: relative;
+                width: 100%;
+                max-width: 224px;
+                height: 100%;
+                max-height: 340px;
+
+                .choose__elements-frame {
+                    &.el-ball {
+                        width: 42px;
+                        height: 50px;
+
+                        top: 0.625rem;
+                        left: 0.625rem;
+                        transform: rotate(-44deg);
+
+                    }
+
+                    &.el-ball-2 {
+                        width: 39px;
+                        height: 48px;
+
+                        top: 14.75rem;
+                        left: 8.75rem;
+                        right: auto;
+                    }
+
+                    &.el-figure {
+                        width: 40px;
+                        height: 52px;
+
+                        top: 7.875rem;
+                        left: 4.75rem;
+
+                        transform: rotate(22deg);
+                    }
+
+                    &.el-tube {
+                        width: 39px;
+                        height: 41px;
+
+                        top: 12.875rem;
+                        right: auto;
+                        left: -0.375rem;
+
+                        transform: rotate(-66deg);
+                    }
+                }
+            }
+        }
+    }
+
 }

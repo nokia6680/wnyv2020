@@ -1,8 +1,8 @@
 .pines {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: auto;
+    right: auto;
     bottom: 0;
 
     width: 100%;
@@ -12,6 +12,7 @@
     z-index: -1;
 
     &__wrapper {
+        margin: 0 auto;
         position: relative;
         width: 100%;
         height: 100%;
@@ -186,6 +187,163 @@
             &.p-7 {
                 top: 9.75rem;
                 left: 3.25rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .pines {
+        padding: 13rem 1.5rem 13rem 1.5rem;
+
+        &__wrapper {
+            max-height: 416px;
+            max-width: 768px;
+        }
+
+        &__item {
+            &.p-1,
+            &.p-12 {
+                width: 21px;
+                height: 29px;
+            }
+
+            &.p-2 {
+                width: 24px;
+                height: 35px;
+            }
+
+            &.p-3,
+            &.p-11{
+                width: 22px;
+                height: 31px;
+            }
+
+            &.p-4,
+            &.p-5 {
+                width: 19px;
+                height: 28px;
+            }
+
+            &.p-6,
+            &.p-7,
+            &.p-14,
+            &.p-16  {
+                width: 28px;
+                height: 40px;
+            }
+
+            &.p-8,
+            &.p-9,
+            &.p-13,
+            &.p-15 {
+                width: 18px;
+                height: 25px;
+            }
+
+            &.p-10 {
+                width: 23px;
+                height: 33px;
+            }
+
+            &.p-13,
+            &.p-14,
+            &.p-15,
+            &.p-16 {
+                display: block;
+            }
+
+            &.p-1 {
+                top: 0.125rem;
+                left: 0.5rem;
+            }
+
+            &.p-2 {
+                top: -2.75rem;
+                left: 25%;
+            }
+
+            &.p-3 {
+                top: -1.875rem;
+                right: 15.5rem;
+            }
+
+            &.p-4 {
+                top: 1.375rem;
+                left: 21.875rem;
+            }
+
+            &.p-5 {
+                top: 3.5rem;
+                left: auto;
+                right: 1rem;
+                transform: none;
+            }
+
+            &.p-6 {
+                top: 11.625rem;
+                right: 0rem;
+            }
+
+            &.p-7 {
+                bottom: auto;
+                top: 4rem;
+                left: 10.25rem;
+            }
+
+            &.p-8 {
+                bottom:auto;
+                top: 6rem;
+                right: 10rem;
+
+                left: auto;
+                transform: none;
+            }
+
+            &.p-9 {
+                bottom: auto;
+                top: 16rem;
+                right: 12.5rem;
+            }
+
+            &.p-10 {
+                top: 9rem;
+                bottom: auto;
+                left: -1rem;
+            }
+
+            &.p-11 {
+                bottom: 11rem;
+                left: auto;
+                right: 17rem;
+                transform: none;
+            }
+
+            &.p-12 {
+                bottom: 5rem;
+                right: 3rem;
+            }
+
+            &.p-13 {
+                top: 15rem;
+                left: 10rem;
+            }
+
+            &.p-14 {
+                bottom: 1rem;
+                left: 14.5rem;
+            }
+
+            &.p-15 {
+                bottom: 2rem;
+                right: 17rem;
+            }
+
+            &.p-16 {
+                bottom: 5rem;
+                left: 5rem;
+
             }
         }
     }
