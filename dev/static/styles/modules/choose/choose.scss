@@ -95,6 +95,13 @@
         max-width: 248px;
         max-height: 248px;
 
+        .slick-slide div {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .slick-dots {
           @include flex-setting(row, center, center);
           margin: 0;
@@ -369,6 +376,10 @@
 
 @media only screen and (max-height: 590px) {
     .choose {
+        &__wrapper {
+            margin-top: -1rem;
+        }
+        
         &__slider {
             max-height: 218px;
             margin-bottom: 0.5rem;

@@ -11,9 +11,13 @@
     &.invisible {
         @include flex-setting(column, space-between, center);
         pointer-events: none;
-        transition: height 0.1s linear 0.1s, linear 0.1s, opacity 0.1s linear;
+        transition: height 0.1s linear 0.1s, opacity 0.1s linear;
         opacity: 0;
-        height: 0;
+        position: absolute;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
     }
 
     &__wrapper {

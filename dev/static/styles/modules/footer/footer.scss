@@ -5,6 +5,13 @@
 
     z-index: 5;
 
+    position: fixed;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 1.5rem;
+
+    width: calc(100% - 3rem);
+
     &.invisible {
         opacity: 0;
         display: none;
@@ -118,6 +125,17 @@
     }
 }
 
+@media only screen and (max-height: 590px) {
+    .footer {
+        position: fixed;
+        bottom: 1rem;
+        left: 1.5rem;
+        right: 1.5rem;
+
+        width: calc(100% - 3rem);
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .footer {
         max-width: 700px;
@@ -174,6 +192,7 @@
 @media only screen and (min-width: 1366px) {
     .footer {
         max-width: 1010px;
+        bottom: 1.25rem;
     }
 }
 
@@ -181,8 +200,6 @@
     .footer {
         max-width: 1220px;
 
-        position: fixed;
-        bottom: 1.25rem;
         left: auto;
         right: auto;
 

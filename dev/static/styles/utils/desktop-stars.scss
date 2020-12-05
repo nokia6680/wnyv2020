@@ -1,0 +1,163 @@
+.desktop-stars {
+    display: none;
+}
+
+@media only screen and (min-width: 1366px) {
+    .desktop-stars {
+        display: block;
+
+        width: 100vw;
+        height: 100vh;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: -2;
+
+        &__item {
+            position: absolute;
+            will-change: contents;
+
+            // Mini
+            &.s-2,
+            &.s-4,
+            &.s-8,
+            &.s-11,
+            &.s-14 {
+                width: 12px;
+                height: 12px;
+            }
+
+            // Maxi
+            &.s-1,
+            &.s-5 {
+                width: 17px;
+                height: 17px;
+            }
+            // Midi
+            &.s-3,
+            &.s-6,
+            &.s-7,
+            &.s-9,
+            &.s-10,
+            &.s-12,
+            &.s-13 {
+                width: 14px;
+                height: 14px;
+            }
+
+            // Purple color
+            &.s-2,
+            &.s-5,
+            &.s-6,
+            &.s-9,
+            &.s-14 {
+                fill: #e154bb;
+            }
+
+            // White color
+            &.s-1,
+            &.s-4,
+            &.s-8,
+            &.s-10,
+            &.s-12 {
+                fill: #fff;
+            }
+
+            &.s-3,
+            &.s-7,
+            &.s-11,
+            &.s-13 {
+                fill: #f1ca12;
+                animation: glow-yellow 1s infinite linear;
+            }
+
+            &.s-1 {
+                top: 2.5rem;
+                left: 1.5rem;
+                animation: glow-white 1.5s infinite forwards linear;
+            }
+
+            &.s-2 {
+                top: 1.125rem;
+                left: 7rem;
+                animation: glow-purple 2s infinite linear;
+            }
+
+            &.s-3 {
+                top: 0.75rem;
+                right: 7.25rem;
+                animation: glow-yellow 1.5s infinite linear;
+            }
+
+            &.s-4 {
+                top: 2.5rem;
+                right: 2.5rem;
+                animation: glow-white 1s infinite linear;
+            }
+
+            &.s-5 {
+                top: 6rem;
+                right: 1rem;
+                animation: glow-purple 2.5s infinite linear;
+            }
+
+            &.s-6 {
+                top: 10.5rem;
+                left: 1.25rem;
+                animation: glow-purple 1s infinite linear;
+            }
+
+            &.s-7 {
+                top: 13.625rem;
+                right: 1rem;
+                animation: glow-yellow 1s infinite linear;
+            }
+
+            &.s-8 {
+                top: 19rem;
+                left: 2.5rem;
+                animation: glow-white 2s infinite linear;
+            }
+
+            &.s-9 {
+                top: 18.75rem;
+                right: 3rem;
+                animation: glow-purple 1s infinite linear;
+            }
+
+            &.s-10 {
+                top: 22rem;
+                right: 1.25rem;
+                animation: glow-white 3s infinite linear;
+            }
+
+            &.s-11 {
+                top: 23.875rem;
+                left: 2.5rem;
+                animation: glow-yellow 3s infinite linear;
+            }
+
+            &.s-12 {
+                top: 30.25rem;
+                left: 1rem;
+                animation: glow-white 2s infinite linear;
+            }
+
+            &.s-13 {
+                top: 28rem;
+                right: 1.45rem;
+                animation: glow-yellow 2s infinite linear;
+            }
+
+            &.s-14 {
+                bottom: 4rem;
+                left: 1.5rem;
+                animation: glow-purple 3s infinite linear;
+            }
+        }
+    }
+}
