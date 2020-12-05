@@ -122,6 +122,11 @@
     .footer {
         max-width: 700px;
 
+        position: fixed;
+        bottom: 1.25rem;
+        left: auto;
+        right: auto;
+
         &__list {
             &-link {
                 font-size: 0.688rem;
@@ -169,5 +174,68 @@
 @media only screen and (min-width: 1366px) {
     .footer {
         max-width: 1010px;
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .footer {
+        max-width: 1220px;
+
+        position: fixed;
+        bottom: 1.25rem;
+        left: auto;
+        right: auto;
+
+        &.invisible {
+            opacity: 1;
+            display: flex;
+            pointer-events: all;
+            transition: opacity 0.25s linear;
+
+            position: fixed;
+            bottom: 1.25rem;
+            left: auto;
+            right: auto;
+        }
+
+        &__list {
+            &-link {
+                font-size: 0.875rem;
+                border-width: 2px;
+
+                padding: 0.625rem 1.875rem;
+            }
+
+            &-item {
+                &:first-of-type {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        &__social {
+            &-item {
+                margin-left: 1.25rem;
+            }
+
+            &-link {
+                width: 46px;
+                height: 46px;
+
+                border-radius: 23px;
+
+                .fa-vk::before {
+                  font-size: 2rem;
+                }
+
+                .fa-instagram::before {
+                  font-size: 2rem;
+                }
+
+                .fa-youtube::before {
+                  font-size: 2rem;
+                }
+            }
+        }
     }
 }

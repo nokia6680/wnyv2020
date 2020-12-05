@@ -601,3 +601,157 @@
         }
     }
 }
+
+@media only screen and (min-width: 1680px) {
+    .i-images {
+        max-width: 670px;
+        min-height: 755px;
+        max-height: 755px;
+
+        &::after {
+            width: 710px;
+            height: 750px;
+        }
+
+        &__item {
+            &.i-1 {
+                width: 80px;
+                max-height: 182px;
+                top: 0;
+                left: 4.25rem;
+            }
+
+            &.i-2 {
+                width: 48px;
+                height: 44px;
+                top: 0rem;
+                left: 15.625rem;
+            }
+
+            &.i-3 {
+                width: 37px;
+                height: 30px;
+                top: 15.625rem;
+                right: 1.75rem;
+            }
+
+            &.i-4 {
+                width: 36px;
+                height: 36px;
+                top: 15.625rem;
+                left: 7.625rem;
+            }
+
+            &.i-5 {
+                width: 63px;
+                height: 63px;
+                top: 3.125rem;
+                left: 22.875rem;
+            }
+
+            &.i-7 {
+                width: 132px;
+                height: 82px;
+                top: auto;
+                bottom: 4rem;
+                left: 3.5rem;
+            }
+
+            &.i-8 {
+                width: 105px;
+                height: 62px;
+                right: 4.75rem;
+                top: 0.5rem;
+            }
+
+            &.i-9 {
+                width: 45px;
+                height: 76px;
+                top: 16.75rem;
+                left: 0.5rem;
+            }
+
+            &.i-10 {
+                width: 127px;
+                height: 112px;
+                top: 7.625rem;
+                right: 6rem;
+            }
+
+            &.i-11 {
+                width: 114px;
+                height: 90px;
+                top: 21rem;
+                left: 5.5rem;
+            }
+
+            &.i-12 {
+                width: 80px;
+                height: 69px;
+                bottom: 3.75rem;
+                right: 6rem;
+            }
+
+            &.i-13 {
+                width: 103px;
+                height: 96px;
+                bottom: 11.625rem;
+                left: 2.375rem;
+            }
+
+            &.i-14 {
+                width: 82px;
+                max-height: 180px;
+                bottom: 11.625rem;
+                right: 2.5rem;
+            }
+
+            &.i-15 {
+                width: 34px;
+                height: 34px;
+                bottom: 13rem;
+                left: 14.5rem;
+            }
+
+            &.i-16 {
+                width: 30px;
+                height: 30px;
+                top: 20rem;
+                right: 7.5rem;
+            }
+
+            &.i-17 {
+                width: 42px;
+                height: 63px;
+                top: 22.25rem;
+                right: 1rem;
+            }
+
+            &.i-18 {
+                width: 47px;
+                height: 42px;
+
+                bottom: 1rem;
+                left: 19rem;
+            }
+        }
+
+        &__mic {
+            margin-bottom: 6.25rem;
+            width: 291px;
+            min-height: 585px;
+            max-height: 585px;
+
+            &-top {
+                width: 291px;
+                height: 437px;
+            }
+
+            &-bottom {
+                width: 237px;
+                height: 227px;
+                margin-top: -5.5rem;
+            }
+        }
+    }
+}

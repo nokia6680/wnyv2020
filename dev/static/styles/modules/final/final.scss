@@ -180,3 +180,21 @@
         }
     }
 }
+
+@media only screen and (min-width: 1680px) {
+    .final {
+        &__wrapper {
+            margin-top: -3rem;
+            grid-template-columns: 50% 50%;
+            grid-column-gap: 0;
+
+            max-width: 1220px;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+            max-width: 25%;
+            margin-bottom: 2rem;
+        }
+    }
+}

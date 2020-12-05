@@ -11,6 +11,7 @@
     }
 
     &.invisible {
+        @include flex-setting(column, flex-start, center);
         pointer-events: none;
         transition: height 0.25s linear 0.25s, opacity 0.25s linear;
         opacity: 0;
@@ -466,7 +467,7 @@
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1366px) {
     .tv {
         &__wrapper {
             max-width: 830px;
@@ -476,6 +477,126 @@
 
         &__info {
             max-width: 396px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .tv {
+        &__wrapper {
+            max-width: 1220px;
+        }
+
+        &__info {
+            max-width: 610px;
+            padding-left: 3.75rem;
+            padding-right: 3.125rem;
+
+            &-link {
+                width: 216px;
+                height: 57px;
+
+                margin-bottom: 3rem;
+            }
+
+            &-description {
+                font-size: 1rem;
+                margin-bottom: 3rem;
+            }
+
+            &-more {
+                font-size: 0.875rem;
+                width: 190px;
+                height: 44px;
+
+                &::after {
+                    width: 204px;
+                    height: 58px;
+                }
+            }
+        }
+
+        &__visual {
+            max-width: 610px;
+            height: 560px;
+        }
+
+        &__screen {
+            width: 290px;
+            height: 405px;
+
+            &-image {
+                height: 348px;
+            }
+
+            &-bottom {
+                width: 264px;
+                height: 151px;
+                bottom: 0.875rem;
+            }
+        }
+
+        &__shadows {
+            &-frame {
+                &.shade-1 {
+                    width: 77px;
+                    height: 91px;
+                    left: 15.625rem;
+                    top: 3rem;
+                }
+
+                &.shade-2 {
+                    width: 109px;
+                    height: 130px;
+
+                    top: 2.375rem;
+                    left: 5.25rem;
+                }
+
+                &.shade-3 {
+                    width: 120px;
+                    height: 143px;
+
+                    top: 10.75rem;
+                    right: 0.75rem;
+                }
+
+                &.shade-4 {
+                    width: 124px;
+                    height: 148px;
+                    right: 5.75rem;
+                }
+
+                &.shade-5 {
+                    width: 94px;
+                    height: 112px;
+
+                    bottom: 10rem;
+                    left: 0;
+                }
+
+                &.shade-6 {
+                    width: 61px;
+                    height: 73px;
+
+                    bottom: 0;
+                    left: 14.0625rem;
+                }
+
+                &.shade-7 {
+                    width: 134px;
+                    height: 160px;
+                    bottom: 0.5rem;
+                    left: 4.25rem;
+                }
+
+                &.shade-10 {
+                    width: 159px;
+                    height: 191px;
+                    bottom: 3.125rem;
+                    right: 5.625rem;
+                }
+            }
         }
     }
 }

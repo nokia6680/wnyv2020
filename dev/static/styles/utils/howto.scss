@@ -181,3 +181,41 @@
         }
     }
 }
+
+@media only screen and (min-width: 1680px) {
+    .howto {
+        &__wrapper {
+            width: 372px;
+            height: 448px;
+
+            padding: 2.5rem 1.75rem 2.5rem 1.75rem;
+        }
+
+        &__head {
+            margin-bottom: 2.25rem;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__close {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 19px;
+        }
+
+        &__item {
+            margin-bottom: 0.875rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+    }
+}

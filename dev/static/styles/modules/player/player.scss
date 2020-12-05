@@ -178,7 +178,7 @@
                     top: 1rem;
                     left: 2rem;
 
-                    animation: glow-yellow 3s linear infinite both;
+                    animation: glow-yellow 3s linear infinite both, jelly-moving 8s linear infinite both;
                 }
 
                 &.el-star {
@@ -190,7 +190,7 @@
 
                     transform: rotate(-22deg);
 
-                    animation: glow-purple 2s linear 0.5s infinite both;
+                    animation: glow-purple 2s linear 0.5s infinite both, jelly-moving 6s linear infinite both reverse;
                 }
 
                 &.el-tree {
@@ -201,7 +201,7 @@
                     top: 5.5rem;
                     right: 3.5rem;
 
-                    animation: glow-white 2s linear 0.2s infinite both;
+                    animation: glow-white 2s linear 0.2s infinite both, jelly-moving 8s linear infinite both;
                 }
 
                 &.el-cone {
@@ -213,7 +213,7 @@
                     top: 0.625rem;
                     right: 1.125rem;
 
-                    animation: glow-orange-ball 2s linear infinite both;
+                    animation: glow-orange-ball 2s linear infinite both, jelly-moving 6s linear infinite both reverse;
                 }
             }
         }
@@ -396,7 +396,7 @@
                         top: 14.5rem;
                         right: -0.5rem;
 
-                        animation: glow-yellow 3s linear infinite both;
+                        animation: glow-yellow 3s linear infinite both, jelly-moving 8s linear infinite both;
                     }
 
                     &.el-star {
@@ -408,7 +408,7 @@
 
                         transform: rotate(-22deg);
 
-                        animation: glow-purple 2s linear 0.5s infinite both;
+                        animation: glow-purple 2s linear 0.5s infinite both, jelly-moving 6s linear infinite both reverse;
                     }
 
                     &.el-tree {
@@ -419,7 +419,7 @@
                         top: 22.625rem;
                         right: 1.125rem;
 
-                        animation: glow-white 2s linear 0.2s infinite both;
+                        animation: glow-white 2s linear 0.2s infinite both, jelly-moving 6s linear infinite both reverse;
                     }
 
                     &.el-cone {
@@ -432,7 +432,7 @@
                         right: 0rem;
                         left: auto;
 
-                        animation: glow-orange-ball 2s linear infinite both;
+                        animation: glow-orange-ball 2s linear infinite both, jelly-moving 8s linear infinite both;
                     }
                 }
             }
@@ -728,6 +728,206 @@
                 top: auto;
                 bottom: -1.25rem;
                 right: 10rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .player {
+        &__wrapper {
+            max-width: 738px;
+            margin-top: 1rem;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+            top: -4.5rem;
+        }
+
+        &__video {
+            margin-bottom: 3rem;
+        }
+
+        &__frame {
+            width: calc(100% - 24px);
+            height: calc(100% - 24px);
+
+            margin-bottom: calc(1.625rem + 1.375rem);
+
+            &::before {
+                width: calc(100% + 24px);
+                height: calc(100% + 24px);
+            }
+        }
+
+        &__details {
+            &-image {
+                width: 330px;
+                margin-bottom: -4rem;
+            }
+
+            &-title {
+                font-size: 2.25rem;
+                max-width: 50%;
+            }
+        }
+
+        &__return {
+            font-size: 0.875rem;
+            padding: 0.875rem 2rem 0.875rem 3.125rem;
+            border-radius: 30px;
+
+            &::after {
+                width: 14px;
+                height: 13px;
+
+                left: 1.25rem;
+            }
+        }
+
+        &__elements {
+            max-height: 490px;
+            max-width: 1350px;
+            top: 12.5rem;
+
+            &-block.el-right {
+                max-height: 490px;
+                max-width: 260px;
+
+                .player__elements-frame {
+                    &.el-disk {
+                        width: 55px;
+                        height: 55px;
+                        top: 14.75rem;
+                        left: 0rem;
+                    }
+
+                    &.el-star {
+                        width: 61px;
+                        height: 62px;
+                        top: 0.188rem;
+                        right: auto;
+                        left: 6rem;
+                    }
+
+                    &.el-tree {
+                        width: 53px;
+                        height: 76px;
+                        bottom: 0;
+                        left: 5.5rem;
+                    }
+
+                    &.el-cone {
+                        width: 64px;
+                        height: 77px;
+                        top: 10rem;
+                        right: 0rem;
+                    }
+                }
+            }
+
+            &-block.el-left {
+                max-height: 490px;
+                max-width: 230px;
+
+                .player__elements-frame {
+                    &.el-disk {
+                        width: 55px;
+                        height: 55px;
+                        top: 1rem;
+                        left: 6.625rem;
+                    }
+
+                    &.el-star {
+                        width: 61px;
+                        height: 62px;
+                        top: 12.875rem;
+                        left: 0rem;
+                    }
+
+                    &.el-tree {
+                        width: 53px;
+                        height: 76px;
+                        top: 10.375rem;
+                        left: auto;
+                        right: 0;
+                    }
+
+                    &.el-cone {
+                        width: 64px;
+                        height: 77px;
+                        bottom: 1.313rem;
+                        left: auto;
+                        right: 2.375rem;
+                    }
+                }
+            }
+        }
+
+        &__ball {
+            max-height: 490px;
+            max-width: 1350px;
+
+            .b-1 {
+                top: 2.625rem;
+                left: 14.75rem;
+            }
+
+            .b-2 {
+                top: 6.75rem;
+                left: 1.875rem;
+            }
+
+            .b-3 {
+                top: 1rem;
+                right: 14.75rem;
+            }
+
+            .b-4 {
+                top: 2.625rem;
+                right: 1.875rem;
+            }
+
+            .b-5 {
+                bottom: 10rem;
+                left: 5.25rem;
+            }
+
+            .b-6 {
+                top: 8.625rem;
+                right: 9.375rem;
+            }
+
+            .b-7 {
+                bottom: 9.5rem;
+                left: 14.375rem;
+            }
+
+            .b-8 {
+                top: auto;
+                bottom: 12rem;
+                right: 1.25rem;
+            }
+
+            .b-10 {
+                bottom: -1rem;
+                left: 15.625rem;
+            }
+
+            .b-11 {
+                bottom: 8.5rem;
+                right: 9.625rem;
+            }
+
+            .b-12 {
+                bottom: -1rem;
+                right: 1rem;
+            }
+
+            .b-13 {
+                bottom: -1.25rem;
+                right: 13.75rem;
             }
         }
     }

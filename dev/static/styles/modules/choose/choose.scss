@@ -320,7 +320,7 @@
                     left: 0.625rem;
                     transform: rotate(-44deg);
 
-                    animation: glow-red-ball 3s linear infinite both;
+                    animation: glow-red-ball 3s linear infinite both, jelly-moving 6s linear infinite both reverse;
                 }
 
                 &.el-ball-2 {
@@ -331,7 +331,7 @@
                     right: 0.625rem;
 
 
-                    animation: glow-yellow 2s linear infinite both;
+                    animation: glow-yellow 2s linear infinite both, jelly-moving 8s linear infinite both;
                 }
 
                 &.el-figure {
@@ -343,7 +343,7 @@
 
                     transform: rotate(-22deg);
 
-                    animation: glow-white 2s linear 0.2s infinite both;
+                    animation: glow-white 2s linear 0.2s infinite both, jelly-moving 6s linear infinite both reverse;
                 }
 
                 &.el-tube {
@@ -353,7 +353,7 @@
                     top: 0.875rem;
                     right: 0.625rem;
 
-                    animation: glow-orange-ball 3s linear 0.5s infinite both;
+                    animation: glow-orange-ball 3s linear 0.5s infinite both, jelly-moving 8s linear infinite both;
                 }
             }
         }
@@ -728,7 +728,7 @@
 
                         transform: rotate(-44deg);
 
-                        animation: glow-red-ball 3s linear infinite both;
+                        animation: glow-red-ball 3s linear infinite both, jelly-moving 8s linear infinite both;
                     }
 
                     &.el-ball-2 {
@@ -738,7 +738,7 @@
                         top: 7.875rem;
                         right: 4.75rem;
 
-                        animation: glow-yellow 2s linear infinite both;
+                        animation: glow-yellow 2s linear infinite both, jelly-moving 8s linear infinite both reverse;
                     }
 
                     &.el-figure {
@@ -749,7 +749,7 @@
 
                         transform: rotate(-22deg);
 
-                        animation: glow-white 2s linear 0.2s infinite both;
+                        animation: glow-white 2s linear 0.2s infinite both, jelly-moving 6s linear infinite both;
                     }
 
                     &.el-tube {
@@ -765,7 +765,7 @@
 
                         transform: rotate(-24deg);
 
-                        animation: glow-orange-ball 3s linear 0.5s infinite both;
+                        animation: glow-orange-ball 3s linear 0.5s infinite both, jelly-moving 6s linear infinite both reverse;
                     }
                 }
             }
@@ -838,6 +838,8 @@
         }
 
         &__item {
+            cursor: pointer;
+
             &.hero-4 {
                 margin-top: auto;
                 margin-bottom: 0;
@@ -908,6 +910,187 @@
                         left: 0rem;
                     }
                 }
+            }
+        }
+
+        &__submit {
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .choose {
+        margin-top: 0rem;
+
+        &__description {
+            font-size: 0.875rem;
+        }
+
+        &__list {
+            width: 100%;
+            max-width: 748px;
+            min-height: 462px;
+            max-height: 462px;
+
+            &:not(.slick-initialized) {
+                max-width: 748px;
+                min-height: 462px;
+                max-height: 462px;
+            }
+        }
+
+        &__slider {
+            margin-bottom: 2rem;
+        }
+
+        &__item {
+            max-width: 220px;
+            max-height: 220px;
+
+            border-radius: 110px;
+            padding: 0.875rem 0.875rem;
+            border-width: 2px;
+
+            &.hero-2 {
+                margin-left: 2.625rem;
+                margin-right: 2.625rem;
+            }
+
+            &.hero-3 {
+                .choose__image {
+                    max-height: 180px;
+                }
+            }
+
+            &.hero-4 {
+                margin-right: 1.313rem;
+
+                .choose__image {
+                    max-height: 160px;
+                }
+            }
+
+            &.hero-5 {
+                margin-left: 1.313rem;
+
+                .choose__image {
+                    max-height: 170px;
+                }
+            }
+        }
+
+        &__frame {
+            width: 186px;
+            height: 186px;
+
+            max-width: 186px;
+            max-height: 186px;
+
+            border-radius: 93px;
+        }
+
+        &__image {
+            max-height: 180px;
+        }
+
+        &__name {
+            font-size: 1.25rem;
+            margin-bottom: 1.875rem;
+        }
+
+        &__elements {
+            max-width: 1200px;
+            height: 470px;
+            top: 16rem;
+
+            &-block.el-right {
+                max-width: 330px;
+                max-height: 470px;
+
+                .choose__elements-frame {
+                    &.el-ball {
+                        bottom: 0;
+                        right: auto;
+                        left: 0;
+                        width: 59px;
+                        height: 70px;
+                    }
+
+                    &.el-ball-2 {
+                        top: 11.25rem;
+                        right: 10rem;
+                        width: 55px;
+                        height: 67px;
+                    }
+
+                    &.el-figure {
+                        width: 56px;
+                        height: 72px;
+                        bottom: 1.875rem;
+                        right: 0rem;
+                    }
+
+                    &.el-tube {
+                        width: 56px;
+                        height: 58px;
+                        top: 0rem;
+                        right: 3.25rem;
+                    }
+                }
+            }
+
+            &-block.el-left {
+                max-width: 310px;
+                max-height: 470px;
+
+                .choose__elements-frame {
+                    &.el-ball {
+                        left: 2.5rem;
+
+                        width: 59px;
+                        height: 70px;
+                    }
+
+                    &.el-ball-2 {
+                        width: 55px;
+                        height: 67px;
+                        left: auto;
+                        right: 0;
+                    }
+
+                    &.el-figure {
+                        width: 56px;
+                        height: 72px;
+                        top: 11.625rem;
+                        left: auto;
+                        right: 3.75rem;
+                    }
+
+                    &.el-tube {
+                        width: 56px;
+                        height: 58px;
+                        bottom: 5.25rem;
+                        left: 0rem;
+                    }
+                }
+            }
+        }
+
+        &__submit {
+            padding: 0;
+            width: 160px;
+            height: 44px;
+            min-height: 44px;
+            border-radius: 22px;
+
+            font-size: 0.875rem;
+            line-height: 1;
+
+            &::after {
+                width: 172px;
+                height: 58px;
+                border-radius: 29px;
             }
         }
     }

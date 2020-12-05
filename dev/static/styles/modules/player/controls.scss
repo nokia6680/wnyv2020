@@ -8,6 +8,8 @@
         @include flex-setting(row, flex-start, center);
 
         &.step-1 {
+            display: none;
+
             .controls__item {
                 margin-right: 0.625rem;
 
@@ -19,8 +21,6 @@
         }
 
         &.step-2 {
-            display: none;
-            
             .controls__item {
                 width: 100%;
                 margin-right: 0.75rem;
@@ -325,6 +325,117 @@
 
                     top: 50%;
                     right: 0.625rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .controls {
+        &__list {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+
+            &.step-1 {
+                .controls__item {
+                    margin-right: 1.25rem;
+
+                    &.rec {
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &.step-2 {
+                .controls__item {
+                    margin-right: 1.25rem;
+
+                    &.send {
+                        margin-right: 0;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            font-size: 0.875rem;
+            border-radius: 21px;
+            height: 42px;
+
+            padding: 0 2.75rem 0 2.125rem;
+
+            &.play {
+                &::after {
+                    width: 12px;
+                    height: 17px;
+                    right: 1.25rem;
+                }
+            }
+
+            &.pause {
+                &::after {
+                    width: 7px;
+                    height: 13px;
+                    right: 1.5rem;
+                }
+            }
+
+            &.stop {
+                &::after {
+                    width: 13px;
+                    height: 13px;
+
+                    top: 48%;
+                    right: 1.5rem;
+                }
+            }
+
+            &.rec {
+                &::after {
+                    width: 13px;
+                    height: 13px;
+
+                    top: 48%;
+                    right: 1.5rem;
+                }
+            }
+
+            &.listen {
+                width: 132px;
+
+                &::after {
+                    width: 12px;
+                    height: 17px;
+
+                    right: 1.25rem;
+                }
+            }
+
+
+            &.repeat {
+                width: 142px;
+
+                &::after {
+                    width: 13px;
+                    height: 15px;
+
+                    top: 49%;
+                    right: 1.25rem;
+                }
+            }
+
+            &.send {
+                width: 120px;
+
+                &::after {
+                    width: 14px;
+                    height: 12px;
+
+                    top: 48%;
+                    right: 1.25rem;
                 }
             }
         }

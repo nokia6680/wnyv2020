@@ -407,7 +407,7 @@
             top: auto;
             left: auto;
             right: auto;
-            bottom: a;
+            bottom: auto;
 
             width: 100%;
             max-width: 450px;
@@ -863,6 +863,336 @@
 
         &__info {
             max-width: 320px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .prize {
+        max-width: 1220px;
+
+        &__wrapper {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        &__info {
+            max-width: 392px;
+            margin-left: 6.25rem;
+
+            &-block {
+                &:first-child {
+                    margin-bottom: 2.375rem;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 1.625rem;
+
+            &::after {
+                height: 7px;
+            }
+
+            &.second {
+                font-size: 1.375rem;
+
+                &::after {
+                    height: 7px;
+                }
+            }
+        }
+
+        &__description {
+            font-size: 1rem;
+            max-width: 86%;
+        }
+
+        &__else {
+            font-size: 1rem;
+            margin-bottom: 2.25rem;
+        }
+
+        &__elements {
+            max-width: 610px;
+            max-height: 640px;
+        }
+
+        &__icons {
+            width: 610px;
+            height: 640px;
+
+            &-frame {
+                &.plane-1 {
+                    width: 124px;
+                    height: 133px;
+
+                    top: 4rem;
+                    left: 3.625rem;
+                }
+
+                &.plane-2 {
+                    width: 95px;
+                    height: 98px;
+                    bottom: 12.5rem;
+                    right: 0.125rem;
+                }
+
+                &.gift-1 {
+                    width: 72px;
+                    height: 63px;
+
+                    top: 9rem;
+                    right: 4.625rem;
+                }
+
+                &.gift-2 {
+                    width: 86px;
+                    height: 72px;
+
+                    bottom: 15.625rem;
+                    left: 1.5rem;
+                }
+
+                &.eye-1 {
+                    width: 35px;
+                    height: 35px;
+
+                    top: 4.625rem;
+                    right: 9.688rem;
+
+                }
+
+                &.eye-2 {
+                    width: 31px;
+                    height: 31px;
+
+                    top: 13rem;
+                    left: 2rem;
+                }
+
+                &.eye-3 {
+                    width: 26px;
+                    height: 26px;
+
+                    top: 16.75rem;
+                    right: 4.75rem;
+                }
+
+                &.eye-4 {
+                    width: 43px;
+                    height: 43px;
+
+                    bottom: 5rem;
+                    left: 3.625rem;
+
+                }
+
+                &.eye-5 {
+                    width: 40px;
+                    height: 40px;
+
+                    bottom: 3.75rem;
+                    right: 5.625rem;
+                }
+            }
+        }
+
+        &__tree {
+            max-height: 640px;
+            max-width: 454px;
+
+            &-frame {
+                max-height: 640px;
+                max-width: 454px;
+
+                .prize__tree-dash-1 {
+                    width: 213px;
+                    height: 92px;
+
+                    top: 3.55rem;
+                    left: 7rem;
+                }
+
+                .prize__tree-dash-2 {
+                    width: 248px;
+                    height: 125px;
+
+                    top: 12rem;
+                }
+
+                .prize__tree-dash-3 {
+                    width: 213px;
+                    height: 92px;
+
+                    bottom: 13.55rem;
+                    right: 0rem;
+                }
+            }
+
+            &-light {
+                width: 454px;
+                height: 640px;
+            }
+        }
+
+        &__light-top {
+            top: 6.5rem;
+            width: 123px;
+            height: 49px;
+        }
+
+        &__light-middle {
+            width: 244px;
+            height: 72px;
+            top: 15.5rem;
+        }
+
+        &__light-bottom {
+            width: 369px;
+            height: 96px;
+            top: 25.0625rem;
+        }
+
+        &__bubbles {
+            width: 610px;
+            height: 640px;
+
+            .bubbles__ball {
+                position: absolute;
+                filter: drop-shadow(0 0 0 #7fb537) drop-shadow(0 0 4px #7fb537);
+
+                &.b1 {
+                    animation: clouds-moving 8s linear infinite both;
+                    right: 13.75rem;
+                }
+
+                &.b2 {
+                    animation: clouds-moving 10s linear infinite both reverse;
+
+                    top: 2.625rem;
+                    right: 14.25rem;
+                }
+
+                &.b3 {
+                    animation: clouds-moving 18s linear infinite both;
+
+                    top: 3.325rem;
+                    right: 11.875rem;
+                }
+
+                &.b4 {
+                    animation: clouds-moving 6s linear 1s infinite both reverse;
+
+                    top: 3.75rem;
+                    left: 5.625rem;
+                }
+
+                &.b5 {
+                    animation: clouds-moving 8s linear infinite both;
+
+                    top: 6.75rem;
+                    left: 12.125rem;
+                }
+
+                &.b6 {
+                    animation: clouds-moving 12s linear 1s infinite both reverse;
+
+                    top: 8.375rem;
+                    left: 12.375rem;
+                }
+
+                &.b7 {
+                    animation: clouds-moving 10s linear infinite both;
+
+                    top: 14.75rem;
+                    left: 5rem;
+                }
+
+                &.b8 {
+                    animation: clouds-moving 14s linear infinite both reverse;
+
+                    top: 14.375rem;
+                    left: 10.875rem;
+                }
+
+                &.b9 {
+                    animation: clouds-moving 6s linear infinite both reverse;
+
+                    top: 13.5rem;
+                    right: 11.125rem;
+                }
+
+                &.b10 {
+                    animation: clouds-moving 8s ease-in infinite both;
+
+                    top: 13.125rem;
+                    right: 8.75rem;
+                }
+
+                &.b11 {
+                    animation: clouds-moving 11s linear infinite both reverse;
+
+                    top: 17.5rem;
+                    left: 7.5rem;
+                }
+
+                &.b12 {
+                    animation: clouds-moving 8s linear infinite both;
+
+                    top: 19.5rem;
+                    right: 3.75rem;
+                }
+
+                &.b13 {
+                    animation: clouds-moving 6s linear infinite both reverse;
+
+                    bottom: 13.375rem;
+                    left: 2rem;
+                }
+
+                &.b14 {
+                    animation: clouds-moving 12s linear infinite both;
+
+                    bottom: 12.875rem;
+                    right: -2rem;
+                }
+
+                &.b15 {
+                    animation: clouds-moving 8s linear infinite both reverse;
+
+                    bottom: 6.5rem;
+                    left: 7.875rem;
+                }
+
+                &.b16 {
+                    animation: clouds-moving 10s linear infinite both;
+
+                    bottom: 7.625rem;
+                    right: 2.375rem;
+                }
+
+                &.b17 {
+                    animation: clouds-moving 8s linear infinite both reverse;
+
+                    bottom: 2.25rem;
+                    left: 14.375rem;
+                }
+
+                &.b18 {
+                    animation: jelly-moving 8s linear infinite both;
+
+                    bottom: 5.625rem;
+                    right: 3.125rem;
+                }
+
+                &.b19 {
+                    animation: jelly-moving 8s linear infinite both;
+
+                    bottom: 1.5rem;
+                    right: 9.75rem;
+                }
+            }
         }
     }
 }

@@ -208,7 +208,7 @@
 
     &__submit {
         @include flex-setting(column, center, center);
-        @include font-setting($secondary-font, 0.75rem, 1, 700, $text-black);
+        @include font-setting($secondary-font, 0.75rem, 1, 700, #07152a);
 
         text-transform: uppercase;
         text-decoration: none;
@@ -225,6 +225,9 @@
         position: relative;
 
         transition: 0.2s linear;
+
+        cursor: pointer;
+        outline: none;
 
         &:hover,
         &:active,
@@ -301,6 +304,77 @@
             height: 18px;
 
             right: 0rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .form {
+        max-width: 356px;
+        padding: 3.125rem 2.75rem 2.75rem 3rem;
+        border-radius: 30px;
+
+        margin-left: 10.625rem;
+
+        &__list {
+            margin-bottom: 2rem;
+        }
+
+        &__item {
+            padding: 0;
+
+            &.name {
+                margin-bottom: 1.25rem;
+
+                &::after {
+                    left: -2rem;
+                    width: 19px;
+                    height: 21px;
+                }
+            }
+
+            &.tel {
+                &::after {
+                    width: 20px;
+                    height: 20px;
+
+                    left: -2rem;
+                }
+            }
+        }
+
+        &__label {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &__input {
+            height: 40px;
+            font-size: 1rem;
+            padding: 0.688rem 0.688rem;
+        }
+
+        &__sign {
+            width: 21px;
+            height: 21px;
+
+            right: -2rem;
+        }
+
+        &__sublabel {
+            font-size: 0.75rem;
+        }
+
+        &__submit {
+            width: 158px;
+            height: 44px;
+
+            font-size: 0.875rem;
+
+            &::after {
+                width: 172px;
+                height: 58px;
+            }
         }
     }
 }
