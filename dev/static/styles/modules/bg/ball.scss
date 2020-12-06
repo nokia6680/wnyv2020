@@ -26,7 +26,7 @@
       width: 6px;
       height: 6px;
 
-      filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 0 4px #fff);
+      filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 
       animation: scale 3s infinite linear backwards;
       will-change: transform;
@@ -132,5 +132,198 @@
         right: 2.125rem;
         animation-delay: 0.6s;
       }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .ball {
+        position: fixed;
+        max-width: 980px;
+        max-height: 400px;
+        top: 11.625rem;
+        left: auto;
+        right: auto;
+        bottom: 0;
+
+        padding: 0;
+
+        &__item {
+          &.b-1 {
+            top: 0;
+            left: 11rem;
+          }
+
+          &.b-2 {
+            top: 6rem;
+            left: 1.25rem;
+          }
+
+          &.b-3 {
+            top: 5rem;
+            right: 1rem;
+          }
+
+          &.b-4 {
+            top: 11.875rem;
+            right: 6.2rem;
+          }
+
+          &.b-5 {
+            top: 7.125rem;
+            left: 11rem;
+          }
+
+          &.b-6 {
+            top: 12.8125rem;
+            right: 0.188rem;
+          }
+
+          &.b-7 {
+            top: 11.625rem;
+            left: 5rem;
+          }
+
+          &.b-8 {
+            top: auto;
+            bottom: 7.5rem;
+            right: 13.5rem;
+          }
+
+          &.b-9 {
+            top: auto;
+            bottom: 1rem;
+            right: 2rem;
+          }
+
+          &.b-10 {
+            top: auto;
+            bottom: 7.125rem;
+            left: 9.5rem;
+          }
+
+          &.b-11 {
+            top: auto;
+            bottom: 8.25rem;
+            left: 16.625rem;
+          }
+
+          &.b-12 {
+            top: auto;
+            bottom: 0;
+            right: 20.25rem;
+          }
+
+          &.b-13 {
+            top: auto;
+            bottom: 4.5rem;
+            left: 0.55rem;
+          }
+
+          &.b-14 {
+            top: auto;
+            bottom: 1.25rem;
+            right: auto;
+            left: 11.25rem;
+          }
+
+          &.b-15 {
+            top: auto;
+            bottom: 3rem;
+            right: auto;
+            left: 20.25rem;
+          }
+
+          &.b-16 {
+            display: none;
+          }
+
+          &.b-17 {
+            display: none;
+          }
+        }
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .ball {
+        max-width: 1386px;
+        max-height: 562px;
+        top: 14.625rem;
+
+        &__item {
+          &.b-1 {
+            top: 0.625rem;
+            left: 15.75rem;
+          }
+
+          &.b-2 {
+            top: 8.375rem;
+            left: 2.125rem;
+          }
+
+          &.b-3 {
+            top: 7rem;
+            right: 2rem;
+          }
+
+          &.b-4 {
+            top: 16.875rem;
+            right: 8.75rem;
+          }
+
+          &.b-5 {
+            top: 10.5rem;
+            left: 15.75rem;
+          }
+
+          &.b-6 {
+            top: 18.125rem;
+            right: 0.25rem;
+          }
+
+          &.b-7 {
+            top: 16.875rem;
+            left: 7.5rem;
+          }
+
+          &.b-8 {
+            bottom: 11rem;
+            right: 19.25rem;
+          }
+
+          &.b-9 {
+            bottom: 2rem;
+            right: 4rem;
+          }
+
+          &.b-10 {
+            bottom: 10rem;
+            left: 13.875rem;
+          }
+
+          &.b-11 {
+            bottom: 11rem;
+            left: 23.625rem;
+          }
+
+          &.b-12 {
+            bottom: 0;
+            right: 28.375rem;
+          }
+
+          &.b-13 {
+            bottom: 6.25rem;
+            left: 0.875rem;
+          }
+
+          &.b-14 {
+            left: 16.25rem;
+          }
+
+          &.b-15 {
+            bottom: 4rem;
+            left: 29rem;
+          }
+        }
     }
 }

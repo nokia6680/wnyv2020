@@ -203,6 +203,8 @@
         left: auto;
         right: auto;
 
+        bottom: 3rem;
+
         &.invisible {
             opacity: 1;
             display: flex;
@@ -210,7 +212,7 @@
             transition: opacity 0.25s linear;
 
             position: fixed;
-            bottom: 1.25rem;
+            bottom: 3rem;
             left: auto;
             right: auto;
         }

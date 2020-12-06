@@ -9,7 +9,10 @@
     margin-top: auto;
     margin-bottom: 0;
 
-    position: relative;
+    position: fixed;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__item {
         position: absolute;
@@ -212,11 +215,6 @@
         width: 112px;
         min-height: 200px;
         max-height: 236px;
-        position: fixed;
-
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0rem;
 
         &-top,
         &-bottom {
