@@ -278,6 +278,10 @@
 
         position: relative;
 
+        bottom: auto;
+        left: auto;
+        transform: none;
+
         @include flex-setting(column, flex-end, center);
 
         &__item {
