@@ -33,6 +33,7 @@ var stepPlayer = document.querySelector('.player');
 var stepFinal = document.querySelector('.final');
 var stepTv = document.querySelector('.tv');
 var stepPrize = document.querySelector('.prize');
+var stepWinner = document.querySelector('.winner');
 
 var returnMap = document.querySelector('.header__return');
 
@@ -40,32 +41,121 @@ var popupHowto = document.querySelector('.howto');
 var popupClose = document.querySelector('.howto__close');
 var popupOpen = document.querySelector('.footer__list-link.manual');
 
+var formSend = document.querySelector('.form__submit');
+var form = document.querySelector('.form');
+var formSuccess = document.querySelector('.success');
+
+if (formSend) {
+    formSend.addEventListener('click', function () {
+        form.classList.add('sent');
+
+        setTimeout(() =>
+            form.classList.add('hidden')
+            , 1000);
+
+        setTimeout(() =>
+            formSuccess.classList.remove('hidden')
+        , 1000);
+
+        setTimeout(() =>
+            formSuccess.classList.add('visible')
+            , 1500);
+
+        setTimeout(() =>
+            formSuccess.classList.remove('visible')
+            , 10000);
+        setTimeout(() =>
+            formSuccess.classList.add('hidden')
+            , 11000);
+
+        setTimeout(() => {
+            stepPrize.classList.remove('visible');
+            stepPrize.classList.add('invisible');
+            stepTv.classList.remove('visible');
+            stepTv.classList.add('invisible');
+            stepFinal.classList.remove('visible');
+            stepFinal.classList.add('invisible');
+            stepPlayer.classList.remove('visible');
+            stepPlayer.classList.add('invisible');
+            stepChoose.classList.remove('visible');
+            stepChoose.classList.add('invisible');
+            stepWinner.classList.remove('visible');
+            stepWinner.classList.add('invisible');
+            header.classList.remove('step-2');
+            header.classList.remove('step-3');
+            header.classList.remove('step-4');
+        }
+        , 11000);
+
+        setTimeout(() => {
+            stepChoose.classList.add('hidden')
+            stepPlayer.classList.add('hidden')
+            stepFinal.classList.add('hidden')
+            stepTv.classList.add('hidden')
+            stepPrize.classList.add('hidden')
+            stepWinner.classList.add('hidden')
+        }
+        , 12000);
+
+
+        setTimeout(() => {
+            stepMap.classList.remove('hidden')
+            stepMap.classList.add('visible')
+        }
+        , 12000);
+
+        setTimeout(() => {
+            stepMap.classList.remove('invisible')
+            header.classList.add('step-1')
+        }
+        , 13000);
+
+        setTimeout(() => {
+            form.classList.remove('hidden')
+            form.classList.remove('sent')
+            stepChoose.classList.remove('hidden')
+            stepPlayer.classList.remove('hidden')
+            stepFinal.classList.remove('hidden')
+            stepTv.classList.remove('hidden')
+            stepPrize.classList.remove('hidden')
+            stepWinner.classList.remove('hidden')
+        }
+        , 13000);
+    });
+};
+
 if (popupOpen) {
     popupOpen.addEventListener('click', function () {
         popupHowto.classList.add('active');
-
-        return false;
     });
 };
 
 if (popupClose) {
     popupClose.addEventListener('click', function () {
         popupHowto.classList.remove('active');
-
-        return false;
     });
 };
 
 if (startLink) {
     startLink.addEventListener('click', function () {
         stepIntro.classList.add('invisible');
-        stepMap.classList.add('visible');
-        stepMap.classList.remove('invisible');
-        header.classList.remove('invisible');
-        header.classList.add('step-1');
-        footer.classList.remove('invisible');
 
-        return false;
+        setTimeout(() =>
+            stepIntro.classList.add('hidden')
+            , 1000);
+        setTimeout(() =>
+            stepMap.classList.add('visible')
+            , 1000);
+        setTimeout(() => {
+            header.classList.remove('hidden')
+            stepMap.classList.remove('invisible')
+            header.classList.remove('invisible')
+            footer.classList.remove('hidden');
+            footer.classList.remove('invisible')
+            header.classList.add('step-1')
+        }
+            , 1500);
+        //footer.classList.remove('invisible');
     });
 };
 
@@ -74,13 +164,20 @@ if (linkChoose) {
         stepMap.classList.remove('visible');
         stepMap.classList.add('invisible');
 
-        stepChoose.classList.remove('invisible');
-        stepChoose.classList.add('visible');
+        setTimeout(() =>
+            stepMap.classList.add('hidden')
+            , 1000);
 
-        header.classList.add('step-2');
-        header.classList.remove('step-1');
+        setTimeout(() =>
+            stepChoose.classList.add('visible')
+            , 1000);
 
-        return false;
+        setTimeout(() => {
+            stepChoose.classList.remove('invisible')
+            header.classList.add('step-2')
+            header.classList.remove('step-1')
+        }
+            , 1500);
     });
 };
 
@@ -89,12 +186,21 @@ if (linkPlayer) {
         stepMap.classList.remove('visible');
         stepMap.classList.add('invisible');
 
-        stepPlayer.classList.remove('invisible');
-        stepPlayer.classList.add('visible');
+        setTimeout(() => {
+                stepMap.classList.add('hidden')
+                stepChoose.classList.add('hidden')
+            }
+            , 1000);
 
-        header.classList.remove('step-1');
+        setTimeout(() =>
+            stepPlayer.classList.add('visible')
+            , 1000);
 
-        return false;
+        setTimeout(() => {
+            stepPlayer.classList.remove('invisible')
+            header.classList.remove('step-1')
+        }
+            , 1500);
     });
 };
 
@@ -103,26 +209,46 @@ if (chooseSubmit) {
         stepChoose.classList.remove('visible');
         stepChoose.classList.add('invisible');
 
-        stepPlayer.classList.remove('invisible');
-        stepPlayer.classList.add('visible');
+        setTimeout(() => {
+                stepChoose.classList.add('hidden')
+            }
+            , 1000);
 
-        header.classList.remove('step-1');
+        setTimeout(() => {
+                stepPlayer.classList.remove('hidden')
+                stepPlayer.classList.add('visible')
+            }
+            , 1000);
 
-        return false;
+        setTimeout(() => {
+            stepPlayer.classList.remove('invisible')
+            header.classList.remove('step-1')
+        }
+            , 1500);
     });
 };
 
 if (chooseReturn) {
     chooseReturn.addEventListener('click', function () {
-        stepChoose.classList.add('visible');
-        stepChoose.classList.remove('invisible');
-
-        stepPlayer.classList.add('invisible');
         stepPlayer.classList.remove('visible');
+        stepPlayer.classList.add('invisible');
 
-        header.classList.remove('step-1');
+        setTimeout(() => {
+            stepPlayer.classList.add('hidden')
+        }
+            , 1000);
 
-        return false;
+        setTimeout(() => {
+            stepChoose.classList.remove('hidden')
+            stepChoose.classList.add('visible')
+        }
+            , 1000);
+
+        setTimeout(() => {
+            stepChoose.classList.remove('invisible')
+            header.classList.remove('step-1')
+        }
+            , 1500);
     });
 };
 
@@ -131,12 +257,22 @@ if (linkFinal) {
         stepMap.classList.remove('visible');
         stepMap.classList.add('invisible');
 
-        stepFinal.classList.remove('invisible');
-        stepFinal.classList.add('visible');
+        setTimeout(() => {
+                stepMap.classList.add('hidden')
+                stepChoose.classList.add('hidden')
+                stepPlayer.classList.add('hidden')
+            }
+            , 1000);
 
-        header.classList.remove('step-1');
+        setTimeout(() =>
+            stepFinal.classList.add('visible')
+            , 1000);
 
-        return false;
+        setTimeout(() => {
+            stepFinal.classList.remove('invisible')
+            header.classList.remove('step-1')
+        }
+            , 1500);
     });
 };
 
@@ -145,12 +281,21 @@ if (linkTv) {
         stepMap.classList.remove('visible');
         stepMap.classList.add('invisible');
 
-        stepTv.classList.add('visible');
-        stepTv.classList.remove('invisible');
-
-        header.classList.remove('step-1');
-
-        return false;
+        setTimeout(() => {
+                stepMap.classList.add('hidden')
+                stepChoose.classList.add('hidden')
+                stepPlayer.classList.add('hidden')
+                stepFinal.classList.add('hidden')
+            }
+            , 1000);
+        setTimeout(() =>
+            stepTv.classList.add('visible')
+            , 1000);
+        setTimeout(() => {
+            stepTv.classList.remove('invisible')
+            header.classList.remove('step-1')
+        }
+            , 1500);
     });
 };
 
@@ -159,40 +304,99 @@ if (linkPrize) {
         stepMap.classList.remove('visible');
         stepMap.classList.add('invisible');
 
-        stepPrize.classList.add('visible');
-        stepPrize.classList.remove('invisible');
-
-        header.classList.remove('step-1');
-
-        return false;
+        setTimeout(() => {
+                stepMap.classList.add('hidden')
+                stepChoose.classList.add('hidden')
+                stepPlayer.classList.add('hidden')
+                stepFinal.classList.add('hidden')
+                stepTv.classList.add('hidden')
+            }
+            , 1000);
+        setTimeout(() =>
+            stepPrize.classList.add('visible')
+            , 1000);
+        setTimeout(() => {
+            stepPrize.classList.remove('invisible')
+            header.classList.remove('step-1')
+        }
+            , 1500);
     });
 };
 
+if (linkWinner) {
+    linkWinner.addEventListener('click', function () {
+        stepMap.classList.remove('visible');
+        stepMap.classList.add('invisible');
+
+        setTimeout(() => {
+                stepMap.classList.add('hidden')
+                stepChoose.classList.add('hidden')
+                stepPlayer.classList.add('hidden')
+                stepFinal.classList.add('hidden')
+                stepTv.classList.add('hidden')
+                stepPrize.classList.add('hidden')
+            }
+            , 1000);
+        setTimeout(() =>
+            stepWinner.classList.add('visible')
+            , 1000);
+        setTimeout(() => {
+            stepWinner.classList.remove('invisible')
+            header.classList.remove('step-1')
+        }
+            , 1500);
+    });
+};
+
+
 if (returnMap) {
     returnMap.addEventListener('click', function () {
-        stepMap.classList.remove('invisible');
-        stepMap.classList.add('visible');
-
         stepPrize.classList.remove('visible');
         stepPrize.classList.add('invisible');
-
         stepTv.classList.remove('visible');
         stepTv.classList.add('invisible');
-
-        stepFinal.classList.add('invisible');
         stepFinal.classList.remove('visible');
-
-        stepPlayer.classList.add('invisible');
+        stepFinal.classList.add('invisible');
         stepPlayer.classList.remove('visible');
-
-        stepChoose.classList.add('invisible');
+        stepPlayer.classList.add('invisible');
         stepChoose.classList.remove('visible');
-
-        header.classList.add('step-1');
+        stepChoose.classList.add('invisible');
+        stepWinner.classList.remove('visible');
+        stepWinner.classList.add('invisible');
         header.classList.remove('step-2');
         header.classList.remove('step-3');
         header.classList.remove('step-4');
 
-        return false;
+        setTimeout(() => {
+            stepChoose.classList.add('hidden')
+            stepPlayer.classList.add('hidden')
+            stepFinal.classList.add('hidden')
+            stepTv.classList.add('hidden')
+            stepPrize.classList.add('hidden')
+            stepWinner.classList.add('hidden')
+        }
+            , 1000);
+
+        setTimeout(() => {
+                stepMap.classList.remove('hidden')
+                stepMap.classList.add('visible')
+            }
+            , 1000);
+
+        setTimeout(() => {
+            stepMap.classList.remove('invisible')
+            header.classList.add('step-1')
+        }
+            , 1500);
+
+        setTimeout(() => {
+                stepChoose.classList.remove('hidden')
+                stepPlayer.classList.remove('hidden')
+                stepFinal.classList.remove('hidden')
+                stepTv.classList.remove('hidden')
+                stepPrize.classList.remove('hidden')
+                stepWinner.classList.remove('hidden')
+            }
+            , 1500);
     });
 };

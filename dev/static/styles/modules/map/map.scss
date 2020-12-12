@@ -8,17 +8,18 @@
         height: 100%;
 
         pointer-events: all;
-        transition: height 0.25s linear 0.25s, opacity 0.25s linear 0.5s;
+        transition: opacity 1s linear;
     }
 
     &.invisible {
-        @include flex-setting(column, flex-start, center);
         pointer-events: none;
-        transition: height 0.25s linear 0.25s, opacity 0.25s linear;
+        transition: opacity 1s linear;
         opacity: 0;
-        height: 0;
-        width: 100%;
         margin: 0 auto;
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__description {
@@ -95,7 +96,7 @@
 
                 &:hover {
                     .frame-tv__image {
-                        animation: tv-screen-blink 1.5s linear forwards;
+                        animation: tv-screen-blink 1s linear forwards;
 
                         transition: 0.2s linear;
                     }
@@ -189,8 +190,7 @@
         &.link-3 {
             grid-area: link-3;
             margin-top: -1rem;
-            display: none;
-
+            
             .map__link {
                 &:hover,
                 &:active {
@@ -377,6 +377,19 @@
                 z-index: 1;
             }
 
+            .frame-tv__logo {
+                z-index: 2;
+                position: absolute;
+
+                width: 60px;
+                height: 60px;
+
+                top: 12px;
+                left: 6px;
+
+                object-fit: contain;
+            }
+
             .frame-tv__image {
                 position: absolute;
 
@@ -385,8 +398,9 @@
                 z-index: 0;
                 top: 0;
 
-                filter: saturate(0) brightness(0.2);
                 transition: 0.2s linear;
+
+                filter: saturate(0.4) brightness(0.4);
             }
 
             .frame-tv__bottom {
@@ -897,6 +911,12 @@
                     height: 115px;
                 }
 
+                .frame-tv__logo {
+                    width: 80px;
+                    height: 80px;
+                    top: 17px;
+                }
+
                 .frame-tv__bottom {
                     width: 90px;
                     height: 52px;
@@ -1238,6 +1258,14 @@
                 .frame-tv__image {
                     width: 120px;
                     height: 140px;
+                }
+
+                .frame-tv__logo {
+                    width: 100px;
+                    height: 100px;
+
+                    top: 22px;
+                    left: 10px;
                 }
 
                 .frame-tv__bottom {

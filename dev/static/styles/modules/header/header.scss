@@ -6,9 +6,12 @@
 
     &.invisible {
         opacity: 0;
-        display: none;
         pointer-events: none;
-        transition: opacity 0.25s linear;
+        transition: opacity 1s linear;
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__wrapper {

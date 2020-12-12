@@ -1,21 +1,24 @@
 .player {
     width: 100%;
 
+    margin: 0 auto;
+
     &.visible {
         @include flex-setting(column, flex-start, center);
         opacity: 1;
-        height: 100%;
 
         pointer-events: all;
-        transition: height 0.25s linear 0.25s, opacity 0.25s linear 0.5s;
+        transition: opacity 1s linear;
     }
 
     &.invisible {
-        @include flex-setting(column, flex-start, center);
         pointer-events: none;
-        transition: height 0.25s linear 0.25s, opacity 0.25s linear;
+        transition: opacity 1s linear;
         opacity: 0;
-        height: 0;
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__wrapper {
@@ -153,8 +156,8 @@
         height: 140px;
         position: fixed;
         top: 27rem;
-        left: auto;
-        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: 0;
 
         z-index: -1;
@@ -317,6 +320,8 @@
 
 @media only screen and (min-width: 768px) {
     .player {
+        max-width: 582px;
+
         &__wrapper {
             max-width: 582px;
             position: relative;
@@ -739,6 +744,9 @@
 
 @media only screen and (min-width: 1680px) {
     .player {
+        max-width: 738px;
+        width: 100%;
+
         &__wrapper {
             max-width: 738px;
             margin-top: 1rem;

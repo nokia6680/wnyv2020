@@ -8,16 +8,17 @@
         height: 100%;
 
         pointer-events: all;
-        transition: height 0.25s linear 0.25s, width 0.25s linear 0.5s, opacity 0.25s linear 0.5s;
+        transition: opacity 1s linear;
     }
 
     &.invisible {
-        @include flex-setting(column, flex-start, center);
         pointer-events: none;
-        transition: height 0.25s linear 0.25s, width 0.25s linear 0.25s, opacity 0.25s linear;
+        transition: opacity 1s linear;
         opacity: 0;
-        height: 0;
-        width: 0;
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__wrapper {
@@ -301,8 +302,8 @@
         height: 100vh;
         position: fixed;
         top: 0;
-        left: 0;
-        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: 0;
 
         z-index: -1;
@@ -379,7 +380,7 @@
         &__wrapper {
             margin-top: -1rem;
         }
-        
+
         &__slider {
             max-height: 218px;
             margin-bottom: 0.5rem;
@@ -479,10 +480,8 @@
 
             width: 100%;
             height: 100vh;
-            position: fixed;
+
             top: 0;
-            left: 0;
-            right: 0;
             bottom: 0;
 
             z-index: -1;
@@ -868,8 +867,6 @@
             max-width: 854px;
             height: 335px;
             top: 15rem;
-            left: auto;
-            right: auto;
 
             &-block.el-right {
                 .choose__elements-frame {

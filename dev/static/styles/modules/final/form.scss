@@ -6,6 +6,9 @@
 
     position: relative;
 
+    transform: rotateY(00deg);
+    transition: transform 1s linear;
+
     &::after {
         position: absolute;
         content: '';
@@ -30,6 +33,15 @@
         @include flex-setting(column, flex-start, center);
 
         margin-bottom: 1.625rem;
+    }
+
+    &.sent {
+        transform: rotateY(90deg);
+        transition: transform 1s linear;
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__item {

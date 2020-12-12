@@ -9,16 +9,17 @@
         height: 100%;
 
         pointer-events: all;
-        transition: height 0.25s linear 0.25s, width 0.25s linear 0.5s, opacity 0.25s linear 0.5s;
+        transition: opacity 1s linear;
     }
 
     &.invisible {
-        @include flex-setting(column, flex-start, center);
         pointer-events: none;
-        transition: height 0.25s linear 0.25s, width 0.25s linear 0.25s, opacity 0.25s linear;
+        transition: opacity 1s linear;
         opacity: 0;
-        height: 0;
-        width: 0;
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__wrapper {
@@ -117,8 +118,8 @@
         position: fixed;
 
         top: 0;
-        left: auto;
-        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: 0;
 
         width: 100%;
@@ -244,8 +245,8 @@
 
         position: fixed;
         top: 0;
-        left: auto;
-        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: 0;
 
         z-index: -1;
@@ -408,6 +409,8 @@
             left: auto;
             right: auto;
             bottom: auto;
+
+            transform: none;
 
             width: 100%;
             max-width: 450px;

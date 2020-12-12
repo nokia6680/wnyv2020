@@ -1,3 +1,213 @@
+@keyframes blink1 {
+  0%,
+  22%,
+  36%,
+  75% {
+    filter: drop-shadow(0 0 0 #fff200) drop-shadow(0 0 4px #fff200) drop-shadow(0 0 2px #fff200);
+  }
+  28%,
+  33%,
+  55% {
+    filter: none;
+  }
+  82%,
+  97% {
+    filter: none;
+  }
+}
+
+@keyframes shine {
+  0% {
+    fill: #6b1839;
+    filter: none;
+  }
+  100% {
+    fill: #ffe6ff;
+    filter: drop-shadow(0 0 0.6rem #ffe6ff) drop-shadow(0 0 1.5rem #ff65bd) drop-shadow(0.2rem 0.1rem 1rem #ff65bd) drop-shadow(0.2rem 0.1rem 1rem #ff65bd) drop-shadow(0 -0.5rem 2rem #ff2483) drop-shadow(0 0.5rem 3rem #ff2483);
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate(0,20px);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg) scale(1.5);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes animate-reverse {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
 @keyframes clouds-moving {
     0% {
         transform: translateX(-0.25rem) translateY(-0.125rem) skewY(2deg);
@@ -284,22 +494,22 @@
 }
 @keyframes tv-screen-blink {
     0% {
-        filter: saturate(0.2) brightness(1);
+        filter: saturate(0.4) brightness(0.4);
     }
 
     30% {
-        filter: saturate(0.4) brightness(0.7);
+        filter: saturate(0.6) brightness(0.6);
     }
 
     50% {
-        filter: drop-shadow(0 0 0 rgba(255, 255, 255, 1)) saturate(0.5) brightness(0.5) drop-shadow(0 0 2px #fff);
+        filter: brightness(0.5) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 4px #fff);
     }
 
     70% {
-        filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0.5)) saturate(0.7) brightness(0.7) drop-shadow(0 0 4px #fff);
+        filter: saturate(0.8) brightness(0.8);
     }
 
     100% {
-        filter: saturate(1) brightness(1) drop-shadow(0 0 5px #fff);
+        filter: saturate(1) brightness(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 4px #fff);
     }
 }

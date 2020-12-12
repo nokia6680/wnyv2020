@@ -28,7 +28,7 @@
             left: 1rem;
 
             filter: drop-shadow(0px 0px 8px rgba(239, 190, 18, 0.55));
-            animation: glow-orange-ball 2s linear infinite both;
+            animation: glow-orange-ball 2s linear infinite both, fadeIn 0.2s linear 4.5s backwards;
         }
 
         &.i-2 {
@@ -40,7 +40,7 @@
             left: 5.375rem;
 
             transform: rotate(22deg);
-            animation: clouds-moving 8s linear infinite both;
+            animation: clouds-moving 8s linear infinite both, fadeIn 0.6s linear 4s backwards;
             filter: drop-shadow(0 0 0 rgba(255, 255, 255, 1)) drop-shadow(0 0 4px rgba(237, 225, 174, 0.93)) drop-shadow(0 0 6px rgba(237, 225, 174, 0.93)) drop-shadow(0 0 8px rgba(237, 225, 174, 0.93));
         }
 
@@ -53,7 +53,7 @@
             right: 1.5rem;
 
             transform: rotate(-22deg);
-            animation: clouds-moving 4s linear infinite both;
+            animation: clouds-moving 4s linear infinite both, fadeIn 0.5s linear 3.5s backwards;
             filter: drop-shadow(0 0 0 rgba(255, 255, 255, 1)) drop-shadow(0 0 4px rgba(237, 225, 174, 0.93)) drop-shadow(0 0 6px rgba(237, 225, 174, 0.93)) drop-shadow(0 0 8px rgba(237, 225, 174, 0.93));
         }
 
@@ -68,6 +68,8 @@
 
             top: 5.25rem;
             left: 3.5rem;
+
+            animation: fadeIn 0.4s linear 3.7s backwards;
         }
 
         &.i-5 {
@@ -79,6 +81,7 @@
             left: 9.5rem;
 
             z-index: 2;
+            animation: fadeIn 0.6s linear 3.3s backwards;
 
             filter: drop-shadow(0 0 4px rgba(237, 225, 174, 0.73)) drop-shadow(0 0 6px rgba(237, 225, 174, 0.4));
         }
@@ -94,6 +97,8 @@
 
             right: 2.125rem;
             top: 1rem;
+
+            animation: fadeIn 0.4s linear 4.2s backwards;
 
             transform: rotate(12deg);
             filter: drop-shadow(0 0 0 rgba(255, 255, 255, 1)) drop-shadow(0 0 4px rgba(237, 225, 174, 0.93)) drop-shadow(0 0 6px rgba(237, 225, 174, 0.53));
@@ -111,7 +116,7 @@
             transform: rotate(-22deg);
             filter: drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 2px rgba(220, 3, 72, 0.7)) drop-shadow(0 0 3px #dc03ac);
 
-            animation: jelly-moving 8s linear infinite both;
+            animation: jelly-moving 8s linear infinite both, fadeIn 0.5s linear 4.5s backwards;
         }
 
         &.i-10 {
@@ -124,7 +129,7 @@
             right: 3rem;
 
             filter: drop-shadow(0 0 2px rgba(131, 219, 15, 0.4)) drop-shadow(0 0 4px rgba(131, 219, 15, 0.4));
-            animation: clouds-moving 6s linear infinite both;
+            animation: clouds-moving 6s linear infinite both, fadeIn 0.8s linear 3.5s backwards;
             z-index: 0;
         }
 
@@ -138,7 +143,7 @@
 
             transform: rotate(5deg);
             filter: drop-shadow(0 0 2px rgba(131, 219, 15, 0.4)) drop-shadow(0 0 4px rgba(131, 219, 15, 0.2));
-            animation: clouds-moving 6s linear infinite both;
+            animation: clouds-moving 6s linear infinite both, fadeIn 0.6s linear 4.8s backwards;
 
             z-index: 2;
         }
@@ -155,7 +160,7 @@
             transform: rotate(-22deg);
             bottom: 4rem;
             filter: drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 2px rgba(255, 108, 0, 0.7)) drop-shadow(0 0 4px #ff6c00);
-            animation: box-rotate 12s ease-in-out infinite both;
+            animation: box-rotate 12s ease-in-out infinite both, fadeIn 0.6s linear 4.2s backwards;
 
         }
 
@@ -168,7 +173,7 @@
             right: 1.25rem;
 
             filter: drop-shadow(0px 0px 8px rgba(239, 190, 18, 0.55));
-            animation: glow-orange-ball 2s linear infinite both;
+            animation: glow-orange-ball 2s linear infinite both, fadeIn 0.6s linear 4.2s backwards;
         }
 
         &.i-15 {
@@ -184,7 +189,7 @@
 
             bottom: 6.75rem;
             right: 3.5rem;
-
+            animation: fadeIn 0.6s linear 3.5s backwards;
             transform: rotate(160deg);
             filter: drop-shadow(0px 0px 4px rgba(239, 190, 18, 0.55)) drop-shadow(0px 0px 6px rgba(239, 190, 18, 0.35));
         }
@@ -201,7 +206,7 @@
             transform: rotate(22deg);
             filter: drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 0 #dc03ac) drop-shadow(0 0 2px rgba(220, 3, 72, 0.7)) drop-shadow(0 0 3px #dc03ac);
 
-            animation: jelly-moving 12s linear infinite both reverse;
+            animation: jelly-moving 12s linear infinite both reverse, fadeIn 0.6s linear 4.5s backwards;
         }
 
         &.i-18 {
@@ -215,6 +220,8 @@
         width: 112px;
         min-height: 200px;
         max-height: 236px;
+
+        animation: fadeIn 1s linear 2.5s backwards;
 
         &-top,
         &-bottom {
@@ -317,7 +324,7 @@
                 top: 9.25rem;
                 left: 1rem;
 
-                animation: eye-rotate 20s linear infinite forwards reverse, glow-white 3s linear infinite forwards;
+                animation: eye-rotate 20s linear infinite forwards reverse, glow-white 3s linear infinite forwards, fadeIn 0.6s linear 3.5s backwards;
             }
 
             &.i-5 {
@@ -327,7 +334,7 @@
                 top: 3rem;
                 left: 11.5rem;
 
-                animation: eye-rotate 10s linear infinite forwards, glow-white 4s linear infinite forwards;
+                animation: eye-rotate 10s linear infinite forwards, glow-white 4s linear infinite forwards, fadeIn 0.6s linear 4.5s backwards;
             }
 
             &.i-7 {
@@ -338,7 +345,7 @@
                 top: 27.625rem;
                 transform: rotate(-15deg);
                 left: -2rem;
-
+                animation: fadeIn 0.6s linear 4.5s backwards;
                 filter: drop-shadow(0 0 0 rgba(255, 255, 255, 1)) drop-shadow(0 0 4px rgba(237, 225, 174, 0.93)) drop-shadow(0 0 6px rgba(237, 225, 174, 0.53));
 
             }
@@ -383,7 +390,7 @@
 
                 transform: rotate(22deg);
                 filter: drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 0 #f6ed27) drop-shadow(0 0 2px rgba(255, 108, 0, 0.7)) drop-shadow(0 0 4px #ff6c00);
-                animation: box-rotate 11s ease-in-out infinite both reverse;
+                animation: box-rotate 11s ease-in-out infinite both reverse, fadeIn 1s linear 4.5s backwards;
                 top: 27.625rem;
                 right: 0rem;
             }
@@ -413,6 +420,8 @@
                 top: 23.875rem;
                 left: 5.25rem;
                 z-index: 2;
+
+                animation: box-rotate 11s ease-in-out infinite both reverse, fadeIn 1s linear 4.5s backwards;
             }
 
             &.i-16 {
@@ -422,7 +431,7 @@
                 top: 14rem;
                 bottom: auto;
                 right: 1.25rem;
-                animation: eye-rotate 15s linear infinite forwards, glow-white 3s linear infinite forwards;
+                animation: eye-rotate 15s linear infinite forwards, glow-white 3s linear infinite forwards, fadeIn 0.6s linear 5.5s backwards, fadeIn 1s linear 4.5s backwards;
             }
 
             &.i-17 {
@@ -441,7 +450,7 @@
 
                 top: 32rem;
                 left: 8rem;
-
+                animation: box-rotate 11s ease-in-out infinite both reverse, fadeIn 1s linear 4.5s backwards;
                 transform: rotate(-15deg);
                 filter: drop-shadow(0 0 0 rgba(255, 255, 255, 1)) drop-shadow(0 0 4px rgba(237, 225, 174, 0.93)) drop-shadow(0 0 6px rgba(237, 225, 174, 0.93)) drop-shadow(0 0 8px rgba(237, 225, 174, 0.93));
             }
@@ -502,6 +511,7 @@
             transform: translate(-50%, -50%);
 
             z-index: -2;
+            animation: fadeIn 1s linear 3s backwards;
         }
 
         &__item {

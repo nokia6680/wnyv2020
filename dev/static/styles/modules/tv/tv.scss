@@ -1,5 +1,6 @@
 .tv {
     width: 100%;
+    margin: 0 auto;
 
     &.visible {
         @include flex-setting(column, flex-start, center);
@@ -7,15 +8,17 @@
         height: 100%;
 
         pointer-events: all;
-        transition: height 0.25s linear 0.25s, opacity 0.25s linear 0.5s;
+        transition: opacity 1s linear;
     }
 
     &.invisible {
-        @include flex-setting(column, flex-start, center);
         pointer-events: none;
-        transition: height 0.25s linear 0.25s, opacity 0.25s linear;
+        transition: opacity 1s linear;
         opacity: 0;
-        height: 0;
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__wrapper {
@@ -265,6 +268,8 @@
 
 @media only screen and (min-width: 768px) {
     .tv {
+        max-width: 750px;
+
         &__wrapper {
             max-width: 750px;
             flex-direction: row;
@@ -469,6 +474,7 @@
 
 @media only screen and (min-width: 1366px) {
     .tv {
+        max-width: 830px;
         &__wrapper {
             max-width: 830px;
             justify-content: space-between;
@@ -483,6 +489,7 @@
 
 @media only screen and (min-width: 1680px) {
     .tv {
+        max-width: 1220px;
         &__wrapper {
             max-width: 1220px;
         }

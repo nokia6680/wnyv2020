@@ -4,20 +4,16 @@
 
     @include flex-setting(column, space-between, center);
 
-    transition: all 0.5s linear;
-
     overflow: visible;
+    padding-top: 0.5rem;
 
     &.invisible {
-        @include flex-setting(column, space-between, center);
-        pointer-events: none;
-        transition: height 0.1s linear 0.1s, opacity 0.1s linear;
         opacity: 0;
-        position: absolute;
-        top: auto;
-        left: auto;
-        bottom: auto;
-        right: auto;
+        transition: opacity 1s linear;
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__wrapper {
@@ -35,6 +31,8 @@
     &__logo {
         @include flex-setting(column, flex-start, center);
         margin-bottom: 1rem;
+
+        animation: appear 0.5s linear 1s backwards;
     }
 
     &__link {
@@ -74,7 +72,15 @@
 
             object-fit: contain;
 
-            filter: drop-shadow(0px 0px 8px rgba(255, 242, 0, 0.9)) drop-shadow(0px 0px 8px rgba(255, 242, 0, 0.5));
+            animation: blink1 10s alternate infinite both;
+
+            .logo {
+                fill: none;
+                stroke: #fff200;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 3px;
+            }
         }
     }
 
@@ -84,6 +90,8 @@
         @include flex-setting(column, flex-start, center);
 
         margin-bottom: 1.375rem;
+
+        animation: appear 0.5s linear 1.5s backwards;
 
         &-description {
             @include font-setting($primary-font, 0.75rem, normal, 500, $text-white);
@@ -170,6 +178,8 @@
 
         @include flex-setting(row, center, center);
 
+        animation: appear 0.5s linear 2s backwards;
+
         &-text {
             @include font-setting('Gotham', 0.625rem, 1.625rem, 900, $text-white);
             text-transform: uppercase;
@@ -207,6 +217,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
+        padding-top: 9rem;
 
         &__wrapper {
             margin-bottom: 0;
@@ -274,6 +286,7 @@
         justify-content: space-between;
         max-width: 1010px;
         overflow: visible;
+        padding-top: 1rem;
 
         &__wrapper {
             max-width: 375px;
@@ -298,6 +311,7 @@
 @media only screen and (min-width: 1680px) {
     .intro {
         max-width: 1216px;
+        padding-top: 4rem;
 
         &__wrapper {
             width: 100%;
