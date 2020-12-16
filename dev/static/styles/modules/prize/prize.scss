@@ -27,7 +27,7 @@
 
         width: 100%;
         max-width: 306px;
-        padding-top: 5rem;
+        padding-top: 3.5rem;
 
         @include flex-setting(column, flex-start, center);
     }
@@ -127,7 +127,7 @@
 
         max-width: 360px;
 
-        padding-top: 11rem;
+        padding-top: 10rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
 
@@ -251,7 +251,7 @@
 
         z-index: -1;
 
-        padding: 11rem 1.5rem 0 1.5rem;
+        padding: 10rem 1.5rem 0 1.5rem;
 
         &-wrapper {
             position: relative;

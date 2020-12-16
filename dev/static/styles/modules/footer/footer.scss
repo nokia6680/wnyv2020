@@ -34,10 +34,10 @@
 
         &-item {
             width: auto;
+            display: none;
 
-            &:last-of-type {
-                margin-right: 0;
-                display: none;
+            &:first-of-type {
+                display: inline-flex;
             }
         }
 
@@ -119,6 +119,16 @@
               transform: translate(-50%, -50%);
             }
 
+            .fa-facebook-f::before {
+              position: absolute;
+              content: '\f39e';
+              font-size: 1em;
+              color: #2d0304;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
             &:hover,
             &:active,
             &:focus {
@@ -155,13 +165,9 @@
             }
 
             &-item {
-                &:first-of-type {
-                    margin-right: 1.25rem;
-                }
-
-                &:last-of-type {
-                    display: inline-flex;
-                }
+                width: auto;
+                display: inline-flex;
+                margin-right: 1.25rem;
             }
         }
 
@@ -187,6 +193,10 @@
 
                 .fa-youtube::before {
                   font-size: 1.125rem;
+                }
+
+                .fa-facebook-f::before {
+                    font-size: 1.125rem;
                 }
             }
         }
@@ -230,9 +240,7 @@
             }
 
             &-item {
-                &:first-of-type {
-                    margin-right: 1rem;
-                }
+                margin-right: 1rem;
             }
         }
 
@@ -257,6 +265,10 @@
 
                 .fa-youtube::before {
                   font-size: 2rem;
+                }
+
+                .fa-facebook-f::before {
+                    font-size: 2rem;
                 }
             }
         }

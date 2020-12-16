@@ -8,8 +8,6 @@
         @include flex-setting(row, flex-start, center);
 
         &.step-1 {
-            display: none;
-
             .controls__item {
                 margin-right: 0.625rem;
 
@@ -21,6 +19,7 @@
         }
 
         &.step-2 {
+            display: none;
             .controls__item {
                 width: 100%;
                 margin-right: 0.75rem;
@@ -35,6 +34,13 @@
     &__item {
         width: auto;
         @include flex-setting(column, cente, center);
+        border-radius: 14px;
+
+        &.rec {
+            &.active {
+                animation: pulse 2s linear infinite;
+            }
+        }
     }
 
     &__btn {

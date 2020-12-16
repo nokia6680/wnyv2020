@@ -190,7 +190,7 @@
         &.link-3 {
             grid-area: link-3;
             margin-top: -1rem;
-            
+
             .map__link {
                 &:hover,
                 &:active {
@@ -667,8 +667,8 @@
         &__list {
             grid-template-areas:
                 'stage-1 link-1'
-                '... stage-2'
-                'stage-3 link-2'
+                'link-2 stage-2'
+                'stage-3 link-3'
             ;
         }
 
@@ -690,11 +690,11 @@
             }
 
             &.link-2 {
-                margin-top: -1.125rem;
+                margin-top: -2.125rem;
             }
 
             &.stage-3 {
-                margin-top: -6rem;
+                margin-top: -3rem;
             }
         }
     }
@@ -706,11 +706,6 @@
 
         &__list {
             max-width: 320px;
-            grid-template-areas:
-                'stage-1 link-1'
-                '... stage-2'
-                'stage-3 link-2'
-            ;
         }
 
         &__item {
@@ -1096,6 +1091,12 @@
                 .map__text {
                     margin-top: 0.25rem;
                     margin-right: 1.25rem;
+                }
+
+                &.active {
+                    &::before {
+                        left: 73%;
+                    }
                 }
             }
         }
