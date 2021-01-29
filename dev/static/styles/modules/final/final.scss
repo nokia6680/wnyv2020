@@ -130,37 +130,35 @@
         margin-bottom: 1rem;
         max-width: 80%;
     }
+
+    &__forms {
+        width: 100%;
+        @include flex-setting(column, flex-start, center);
+    }
 }
 
 @media only screen and (min-width: 768px) {
     .final {
         max-width: 740px;
+
         &__stars {
             display: none;
         }
 
         &__wrapper {
+            margin-top: -5.5rem;
             position: relative;
-
-            width: 100%;
-            display: grid;
-            grid-template-areas:
-                'title title'
-                'form visual'
-            ;
-
-            grid-template-columns: 300px 420px;
-            grid-column-gap: 1.25rem;
-            justify-content: center;
-            align-items: center;
-
             max-width: 740px;
+        }
+
+        &__forms {
+            width: 100%;
+            @include flex-setting(row, space-between, center);
         }
 
         &__description {
             justify-self: center;
             margin: 0 auto;
-            grid-area: title;
             align-self: center;
             font-size: 0.813rem;
             margin-bottom: 0;
@@ -172,12 +170,10 @@
 @media only screen and (min-width: 1366px) {
     .final {
         max-width: 780px;
+        margin-top: 0;
 
         &__wrapper {
             margin-top: -4rem;
-            grid-template-columns: 300px 420px;
-            grid-column-gap: 4rem;
-
             max-width: 780px;
         }
 
@@ -187,14 +183,11 @@
     }
 }
 
-@media only screen and (min-width: 1680px) {
+@media only screen and (min-width: 1920px) {
     .final {
         max-width: 1220px;
         &__wrapper {
             margin-top: -3rem;
-            grid-template-columns: 50% 50%;
-            grid-column-gap: 0;
-
             max-width: 1220px;
         }
 

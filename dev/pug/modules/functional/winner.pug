@@ -3,6 +3,49 @@ section.winner.invisible
     .winner__frame
         img(src="static/images/common/gift-2.svg" alt="winners").winner__frame-image
         img(src="static/images/common/gift-2-bottom.svg" alt="winners bottom").winner__frame-bottom
+        
+    .winner__block
+        .winner__main
+            h2.winner__main-title Главный победитель:
+            b.winner__main-name
+        .winner__daily
+            h3.winner__daily-title Победители дня:    
+            .winner__slider
+                .winner__slide
+                    +winner('Ярослав ','г. Краснознаменск')
+                    +winner('Даша ','г. Москва')
+                    +winner('Ксения ','г. Москва')
+                    +winner('Артемий ','г. Омск')
+                    +winner('Алиса ','г. Москва')
+                    +winner('Ольга ','с. Черниговка')
+                .winner__slide
+                    +winner('Антон ','г. Нижний Тагил')
+                    +winner('Ксения ','г. Нефтеюганск')
+                    +winner('Валентин ','г. Магнитогорск')
+                    +winner('Виктория ','г. Москва')
+                    +winner('Халима ','пос. Гикало')
+                    +winner('Альбина ','г. Стрежевой')
+                .winner__slide
+                    +winner('Марк ','г. Саратов')
+                    +winner('Виктория ','г. Нижний Новгород')
+                    +winner('Вероника ','г. Москва')
+                    +winner('Анна ','г. Чебоксары')
+                    +winner('Лариса ','г. Иркутск')
+                    +winner('Наталья ','с. Большой Улуй')
+                .winner__slide
+                    +winner('Максим ','г. Барнаул')
+                    +winner('Ирина ','г. Грязи')
+                    +winner('Алиса ','г. Москва')
+                    +winner('Светлана ','г. Москва')
+                    +winner('Ксения ','г. Тольятти')
+                    +winner('Катерина ','с. Бахтеевка')
+                .winner__slide
+                    +winner('Радмила ','г. Уфа')
+                    +winner('Иван ','г. Москва')
+                    +winner('Даниил ','г. Воронеж')
+                    +winner('Максим ','г. Химки')
+            button(type="button").winner__next
+            button(type="button").winner__prev
     
     .winner__glowing
         span(style="--i:1").winner__glowing-part

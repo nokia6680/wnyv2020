@@ -31,3 +31,47 @@ $(window).on('resize', function(e){
     }
   }
 }).trigger('resize');
+
+var slick = $('.winner__slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    autoplay: false,
+    cssEase: 'cubic-bezier(0.600, -0.180, 0.735, 0.045)',
+    speed: 500,
+    prevArrow: $('.winner__prev'),
+    nextArrow: $('.winner__next'),
+
+    responsive: [
+        {
+            breakpoint: 9999,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                autoplay: false,
+                cssEase: 'cubic-bezier(0.600, -0.180, 0.735, 0.045)',
+                speed: 500,
+                prevArrow: $('.winner__prev'),
+                nextArrow: $('.winner__next')
+            }
+        },
+        {
+            breakpoint: 1366,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                autoplay: false,
+                cssEase: 'cubic-bezier(0.600, -0.180, 0.735, 0.045)',
+                speed: 500,
+                prevArrow: $('.winner__prev'),
+                nextArrow: $('.winner__next')
+            }
+        }
+    ]
+});

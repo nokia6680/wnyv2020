@@ -144,11 +144,20 @@ if (startLink) {
             stepIntro.classList.add('hidden')
             , 1000);
         setTimeout(() =>
-            stepMap.classList.add('visible')
+            stepWinner.classList.add('visible')
             , 1000);
         setTimeout(() => {
+            stepWinner.classList.remove('invisible')
+            stepIntro.classList.add('invisible')
             header.classList.remove('hidden')
-            stepMap.classList.remove('invisible')
+            stepIntro.classList.add('hidden')
+            stepMap.classList.add('hidden')
+            stepPrize.classList.add('hidden')
+            stepFinal.classList.add('hidden')
+            stepIntro.classList.add('hidden')
+            stepTv.classList.add('hidden')
+            stepChoose.classList.add('hidden')
+            stepPlayer.classList.add('hidden')
             header.classList.remove('invisible')
             footer.classList.remove('hidden');
             footer.classList.remove('invisible')

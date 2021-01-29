@@ -30,14 +30,25 @@
         width: 100%;
         @include flex-setting(column, flex-start, center);
 
+        &-wrap {
+            @include flex-setting(row, center, center);
+            margin-bottom: 1rem;
+        }
+
         &-link {
             display: inline-flex;
             text-decoration: none;
 
-            width: 132px;
-            height: 36px;
+            &.tri {
+                width: 132px;
+                height: 36px;
+                margin-right: 1rem;
+            }
 
-            margin-bottom: 1rem;
+            &.kid {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         &-logo {
@@ -209,9 +220,9 @@
         text-decoration: none;
 
         background-color: #e50d2a;
-        border-radius: 25px;
+        border-radius: 18px;
 
-        width: 138px;
+        width: 136px;
         height: 36px;
 
         box-shadow: 0px -5px 5px 5px rgba(205, 7, 24, 0.7) inset;
@@ -231,7 +242,7 @@
             position: absolute;
             content: '';
 
-            width: 148px;
+            width: 146px;
             height: 46px;
 
             top: 50%;
@@ -241,7 +252,7 @@
 
             background-color: transparent;
             border: 1px solid #e50d2a;
-            border-radius: 26px;
+            border-radius: 23px;
 
             box-shadow: 0 0 5px 1px rgba(205, 7, 24, 0.57), 0 0 5px 1px rgba(205, 7, 24, 0.57) inset;
         }
@@ -251,11 +262,39 @@
 @media only screen and (max-height: 590px) {
     .tv {
         &__info {
-            &-link {
-                width: 132px;
-                height: 24px;
+            margin-top: -1.5rem;
 
+            &-wrap {
                 margin-bottom: 0.5rem;
+            }
+
+            &-link {
+                &.tri {
+                    width: 132px;
+                    height: 24px;
+                }
+
+                &.kid {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+
+            &-description {
+                font-size: 0.688rem;
+            }
+        }
+
+        &__link {
+            border-radius: 14px;
+
+            width: 120px;
+            height: 28px;
+
+            &::after {
+                width: 130px;
+                height: 38px;
+                border-radius: 19px;
             }
         }
 
@@ -281,11 +320,21 @@
             order: 2;
             max-width: 300px;
 
-            &-link {
-                width: 170px;
-                height: 44px;
-
+            &-wrap {
                 margin-bottom: 2rem;
+            }
+
+            &-link {
+                &.tri {
+                    width: 170px;
+                    height: 44px;
+                    margin-right: 2rem;
+                }
+
+                &.kid {
+                    width: 50px;
+                    height: 50px;
+                }
             }
 
             &-description {
@@ -483,11 +532,16 @@
 
         &__info {
             max-width: 396px;
+
+            &.kid {
+                width: 54px;
+                height: 54px;
+            }
         }
     }
 }
 
-@media only screen and (min-width: 1680px) {
+@media only screen and (min-width: 1920px) {
     .tv {
         max-width: 1220px;
         &__wrapper {
@@ -500,10 +554,20 @@
             padding-right: 3.125rem;
 
             &-link {
-                width: 216px;
-                height: 57px;
+                &-wrap {
+                    margin-bottom: 3rem;
+                }
 
-                margin-bottom: 3rem;
+                &.tri {
+                    width: 216px;
+                    height: 57px;
+                    margin-right: 3rem;
+                }
+
+                &.kid {
+                    width: 70px;
+                    height: 70px;
+                }
             }
 
             &-description {
